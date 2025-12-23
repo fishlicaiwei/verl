@@ -1,0 +1,11 @@
+##Skywork-Reward-Llama-3.1-8B-v0.2
+docker run -d --name Skywork --gpus "device=6" --network host -v /data2/cwli16/share-models:/models lmsysorg/sglang:latest python3 -m sglang.launch_server --model-path /models/Skywork-Reward-Llama-3.1-8B-v0.2 --host 0.0.0.0 --port 30005 --trust-remote-code --mem-fraction-static 0.2 --max-running-requests 400 --is-embedding
+##Llama-3.1-8B-Instruct-RM-RB2
+docker run -d --name Llama-3.1-8B-Instruct-RM-RB2 --gpus "device=7" --network host -v /data2/cwli16/share-models:/models lmsysorg/sglang:latest python3 -m sglang.launch_server --model-path /models/Llama-3.1-8B-Instruct-RM-RB2 --host 0.0.0.0 --port 30006 --trust-remote-code --mem-fraction-static 0.3 --max-running-requests 400
+
+
+
+##RM-R1-DeepSeek-Distilled-Qwen-14B
+docker run -d --name RM-R1 --gpus "device=0" --network host -v /data2/cwli16/share-models:/models lmsysorg/sglang:latest python3 -m sglang.launch_server --model-path /models/RM-R1-DeepSeek-Distilled-Qwen-14B --host 0.0.0.0 --port 30004 --trust-remote-code --is-embedding --mem-fraction-static 0.4 --max-running-requests 400
+##internlm2-7b-reward
+docker run -d --name reward-server --gpus "device=1" --network host -v /data2/cwli16/share-models:/models lmsysorg/sglang:latest python3 -m sglang.launch_server --model-path /models/internlm2-7b-reward --host 0.0.0.0 --port 30002 --trust-remote-code --is-embedding --mem-fraction-static 0.2 --max-running-requests 400
