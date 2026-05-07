@@ -1,0 +1,12 @@
+Using LocalLogger is deprecated. The constructor API will change
+Found checkpoint: %s /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+Load from checkpoint folder: /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+Setting global step to 30
+Resuming from /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['skywork', 'rmrb2'] reward manager call...
+[skywork] invalid content format count in batch: 3172
+Sending 4418 requests to skywork/classify with batch size 64...
+[rmrb2] invalid content format count in batch: 3172
+Sending 4418 requests to rmrb2/classify with batch size 64...

@@ -1,0 +1,850 @@
+Using LocalLogger is deprecated. The constructor API will change
+Checkpoint tracker file does not exist: %s /workspace/models/checkpoints/reward_model_chat_grpo_qwen2-5_7b/skywork_exp1_VR/latest_checkpointed_iteration.txt
+Training from scratch
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 2528
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 169.79 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: <think>
+I'll generate 50 ideas for using chameleon clothes for fun and profit, considering the settings of hard sci-fi and the limitations of the chameleon technology.
+</think>
+
+<answer>
+1. Fashion designer creates a line of chameleon clothing that changes colors based on the wearer's mood.
+2. Chameleon suits for professional athletes to blend in with the crowd and avoid paparazzi.
+3. Chameleon costumes for actors and performers to easily switch between different characters.
+4. Chameleon clothing for undercover agents to blend in with any environment.
+5. Chameleon clothing for artists to create unique, ever-changing art installations.
+6. Chameleon clothing for children to play hide-and-seek in any environment.
+7. Chameleon clothing for hunters to blend in with their surroundings and sneak up on prey.
+8. Chameleon clothing for photographers to blend in with their environment and capture candid shots.
+9. Chameleon clothing for soldiers to blend in with the battlefield and avoid detection.
+10. Chameleon clothing for firefighters to blend in with the environment and avoid detection by the flames.
+11. Chameleon clothing for spies to blend in with any environment and avoid detection.
+12. Chameleon clothing for chefs to blend in with their surroundings and avoid detection by rival chefs.
+13. Chameleon clothing for thieves to blend in with their surroundings and avoid detection.
+14. Chameleon clothing for environmentalists to blend in with nature and avoid detection by poachers.
+15. Chameleon clothing for park rangers to blend in with the environment and avoid detection by poachers.
+16. Chameleon clothing for wildlife photographers to blend in with their environment and capture candid shots.
+17. Chameleon clothing for explorers to blend in with their surroundings and avoid detection by hostile natives.
+18. Chameleon clothing for treasure hunters to blend in with their surroundings and avoid detection by rival treasure hunters.
+19. Chameleon clothing for archaeologists to blend in with their surroundings and avoid detection by hostile natives.
+20. Chameleon clothing for astronauts to blend in with the environment of other planets and avoid detection by hostile aliens.
+21. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+22. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+23. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+24. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+25. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+26. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+27. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+28. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+29. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+30. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+31. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+32. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+33. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+34. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+35. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+36. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+37. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+38. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+39. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+40. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+41. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+42. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+43. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+44. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+45. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+46. Chameleon clothing for space tourists to blend in with the environment of other planets and avoid detection by hostile aliens.
+47. Chameleon clothing for spacewalkers to blend in with the environment of other planets and avoid detection by hostile aliens.
+48. Chameleon clothing for space miners to blend in with the environment of other planets and avoid detection by hostile aliens.
+49. Chameleon clothing for space engineers to blend in with the environment of other planets and avoid detection by hostile aliens.
+50. Chameleon clothing for space scientists to blend in with the environment of other planets and avoid detection by hostile aliens.
+</answer>
+  - [Score - rmrb2]: -1.90
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+('Initial validation metrics: '
+ "{'val/test_score/tulu-3-wildchat-if-on-policy-8b': -0.9475494320787474, "
+ "'val/test_score/PKU-SafeRLHF': -0.6058642578125, "
+ "'val/test_score/SciRIFF-train-mix': -0.7800464441280553, "
+ "'val/test_score/RLVR-MATH': -2.7281883567388805, "
+ "'val/test_score/tulu-3-IF-augmented-on-policy-8b': -2.1034781262765523, "
+ "'val/test_score/DeepWriting-20K': -0.4914502779642741, "
+ "'val/test_score/tulu-3-sft-personas-code': 1.9237477416992188, "
+ "'val/test_score/xlam-function-calling-60k': 0.7190736920646067, "
+ "'val/test_score/OpenAssistant-oasst1': -0.7613758433948864, "
+ "'val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b': "
+ "-1.2888061822938526, 'val/invalid_format_cnt_rmrb2': 2528}")
+step:0 - val/test_score/tulu-3-wildchat-if-on-policy-8b:-0.948 - val/test_score/PKU-SafeRLHF:-0.606 - val/test_score/SciRIFF-train-mix:-0.780 - val/test_score/RLVR-MATH:-2.728 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-2.103 - val/test_score/DeepWriting-20K:-0.491 - val/test_score/tulu-3-sft-personas-code:1.924 - val/test_score/xlam-function-calling-60k:0.719 - val/test_score/OpenAssistant-oasst1:-0.761 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:-1.289 - val/invalid_format_cnt_rmrb2:2528.000
+Training Progress:   3%|▎         | 2/78 [10:48<6:49:58, 323.66s/it]
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 879
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 69.68 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:1 - global_seqlen/min:227602.000 - global_seqlen/max:268220.000 - global_seqlen/minmax_diff:40618.000 - global_seqlen/balanced_min:245477.000 - global_seqlen/balanced_max:245477.000 - global_seqlen/mean:245477.000 - reward/score_skywork:-15.879 - reward/invalid_format_cnt_skywork:879.000 - actor/kl_loss:0.001 - actor/kl_coef:0.001 - actor/entropy_loss:1.582 - actor/pg_loss:-0.140 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:1.739 - perf/mfu/actor:0.373 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:93.994 - perf/cpu_memory_used_gb:67.874 - actor/lr:0.000 - critic/score/mean:-15.879 - critic/score/max:14.125 - critic/score/min:-39.500 - critic/rewards/mean:-15.879 - critic/rewards/max:14.125 - critic/rewards/min:-39.500 - critic/advantages/mean:0.100 - critic/advantages/max:2.440 - critic/advantages/min:-2.346 - critic/returns/mean:0.100 - critic/returns/max:2.440 - critic/returns/min:-2.346 - response_length/mean:509.866 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.033 - prompt_length/mean:257.250 - prompt_length/max:999.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:109.492 - timing_s/old_log_prob:20.497 - timing_s/ref:27.310 - timing_s/adv:70.854 - timing_s/update_actor:99.574 - timing_s/step:327.936 - timing_per_token_ms/update_actor:0.068 - timing_per_token_ms/ref:0.019 - timing_per_token_ms/adv:0.048 - timing_per_token_ms/gen:0.112 - perf/total_num_tokens:1472862.000 - perf/time_per_step:327.936 - perf/throughput:748.552
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 843
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 66.74 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:2 - global_seqlen/min:224995.000 - global_seqlen/max:258654.000 - global_seqlen/minmax_diff:33659.000 - global_seqlen/balanced_min:240140.000 - global_seqlen/balanced_max:240141.000 - global_seqlen/mean:240140.167 - reward/score_skywork:-15.916 - reward/invalid_format_cnt_skywork:843.000 - actor/kl_loss:0.001 - actor/kl_coef:0.001 - actor/entropy_loss:1.611 - actor/pg_loss:-0.190 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.812 - perf/mfu/actor:0.374 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:93.994 - perf/cpu_memory_used_gb:67.486 - actor/lr:0.000 - critic/score/mean:-15.916 - critic/score/max:10.500 - critic/score/min:-37.750 - critic/rewards/mean:-15.916 - critic/rewards/max:10.500 - critic/rewards/min:-37.750 - critic/advantages/mean:0.135 - critic/advantages/max:2.391 - critic/advantages/min:-2.409 - critic/returns/mean:0.135 - critic/returns/max:2.391 - critic/returns/min:-2.409 - response_length/mean:492.001 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.032 - prompt_length/mean:258.438 - prompt_length/max:959.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:115.763 - timing_s/old_log_prob:19.418 - timing_s/ref:19.661 - timing_s/adv:67.870 - timing_s/update_actor:97.181 - timing_s/step:320.046 - timing_per_token_ms/update_actor:0.067 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.047 - timing_per_token_ms/gen:0.123 - perf/total_num_tokens:1440841.000 - perf/time_per_step:320.046 - perf/throughput:750.331
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 956
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 69.21 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:3 - global_seqlen/min:222539.000 - global_seqlen/max:277067.000 - global_seqlen/minmax_diff:54528.000 - global_seqlen/balanced_min:243667.000 - global_seqlen/balanced_max:243667.000 - global_seqlen/mean:243667.000 - reward/score_skywork:-15.225 - reward/invalid_format_cnt_skywork:956.000 - actor/kl_loss:0.001 - actor/kl_coef:0.001 - actor/entropy_loss:1.726 - actor/pg_loss:-0.131 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:6.486 - perf/mfu/actor:0.382 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:102.824 - perf/cpu_memory_used_gb:67.769 - actor/lr:0.000 - critic/score/mean:-15.225 - critic/score/max:10.250 - critic/score/min:-35.000 - critic/rewards/mean:-15.225 - critic/rewards/max:10.250 - critic/rewards/min:-35.000 - critic/advantages/mean:0.099 - critic/advantages/max:2.317 - critic/advantages/min:-2.226 - critic/returns/mean:0.099 - critic/returns/max:2.317 - critic/returns/min:-2.226 - response_length/mean:499.339 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.032 - prompt_length/mean:262.121 - prompt_length/max:1016.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:111.087 - timing_s/old_log_prob:20.224 - timing_s/ref:21.151 - timing_s/adv:70.334 - timing_s/update_actor:96.880 - timing_s/step:319.809 - timing_per_token_ms/update_actor:0.066 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.048 - timing_per_token_ms/gen:0.116 - perf/total_num_tokens:1462002.000 - perf/time_per_step:319.809 - perf/throughput:761.914
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1081
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 76.17 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:4 - global_seqlen/min:222477.000 - global_seqlen/max:281285.000 - global_seqlen/minmax_diff:58808.000 - global_seqlen/balanced_min:258336.000 - global_seqlen/balanced_max:258337.000 - global_seqlen/mean:258336.333 - reward/score_skywork:-14.266 - reward/invalid_format_cnt_skywork:1081.000 - actor/kl_loss:0.001 - actor/kl_coef:0.001 - actor/entropy_loss:1.426 - actor/pg_loss:-0.128 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:3.598 - perf/mfu/actor:0.373 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:102.824 - perf/cpu_memory_used_gb:67.674 - actor/lr:0.000 - critic/score/mean:-14.266 - critic/score/max:11.938 - critic/score/min:-40.750 - critic/rewards/mean:-14.266 - critic/rewards/max:11.938 - critic/rewards/min:-40.750 - critic/advantages/mean:0.112 - critic/advantages/max:2.362 - critic/advantages/min:-2.311 - critic/returns/mean:0.112 - critic/returns/max:2.362 - critic/returns/min:-2.311 - response_length/mean:536.480 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.042 - prompt_length/mean:270.821 - prompt_length/max:1015.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:116.289 - timing_s/old_log_prob:21.544 - timing_s/ref:21.730 - timing_s/adv:77.285 - timing_s/update_actor:104.775 - timing_s/step:341.783 - timing_per_token_ms/update_actor:0.068 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.050 - timing_per_token_ms/gen:0.113 - perf/total_num_tokens:1550018.000 - perf/time_per_step:341.783 - perf/throughput:755.848
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1240
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 79.48 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 3854
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 182.62 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: <answer>
+1. Fashion designer creates a line of chameleon clothing that can change colors to match any outfit or occasion.
+2. A spy agency uses chameleon clothing to blend in with different environments and avoid detection.
+3. A group of friends use chameleon clothing to play hide-and-seek in a large park.
+4. A fashion show features models wearing chameleon clothing that changes colors to match the music and lighting.
+5. A group of artists use chameleon clothing to create a living art installation that changes colors and patterns throughout the day.
+6. A group of children use chameleon clothing to play dress-up and pretend to be different characters.
+7. A group of friends use chameleon clothing to play a game of tag in a large field.
+8. A fashion blogger uses chameleon clothing to create a series of videos showcasing different outfits and styles.
+9. A group of friends use chameleon clothing to play a game of hide-and-seek in a large building.
+10. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's mood.
+11. A group of friends use chameleon clothing to play a game of capture the flag in a large park.
+12. A fashion show features models wearing chameleon clothing that changes colors to match the audience's reactions.
+13. A group of children use chameleon clothing to play dress-up and pretend to be different animals.
+14. A group of friends use chameleon clothing to play a game of hide-and-seek in a large forest.
+15. A fashion blogger uses chameleon clothing to create a series of videos showcasing different outdoor activities.
+16. A group of friends use chameleon clothing to play a game of tag in a large shopping mall.
+17. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's surroundings.
+18. A group of children use chameleon clothing to play dress-up and pretend to be different superheroes.
+19. A group of friends use chameleon clothing to play a game of hide-and-seek in a large beach.
+20. A fashion show features models wearing chameleon clothing that changes colors to match the weather.
+21. A group of friends use chameleon clothing to play a game of capture the flag in a large park.
+22. A fashion blogger uses chameleon clothing to create a series of videos showcasing different beach activities.
+23. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite books.
+24. A group of friends use chameleon clothing to play a game of hide-and-seek in a large amusement park.
+25. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's favorite colors.
+26. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite movies.
+27. A group of friends use chameleon clothing to play a game of tag in a large water park.
+28. A fashion show features models wearing chameleon clothing that changes colors to match the audience's reactions.
+29. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite TV shows.
+30. A group of friends use chameleon clothing to play a game of hide-and-seek in a large zoo.
+31. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's favorite patterns.
+32. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite video games.
+33. A group of friends use chameleon clothing to play a game of capture the flag in a large park.
+34. A fashion show features models wearing chameleon clothing that changes colors to match the music and lighting.
+35. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite cartoons.
+36. A group of friends use chameleon clothing to play a game of hide-and-seek in a large theme park.
+37. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's favorite animals.
+38. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite fairy tales.
+39. A group of friends use chameleon clothing to play a game of tag in a large botanical garden.
+40. A fashion show features models wearing chameleon clothing that changes colors to match the audience's reactions.
+41. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite historical events.
+42. A group of friends use chameleon clothing to play a game of hide-and-seek in a large museum.
+43. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's favorite sports teams.
+44. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite sports.
+45. A group of friends use chameleon clothing to play a game of capture the flag in a large park.
+46. A fashion show features models wearing chameleon clothing that changes colors to match the music and lighting.
+47. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite video games.
+48. A group of friends use chameleon clothing to play a game of hide-and-seek in a large water park.
+49. A fashion designer creates a line of chameleon clothing that can change colors to match the wearer's favorite hobbies.
+50. A group of children use chameleon clothing to play dress-up and pretend to be different characters from their favorite hobbies.
+</answer>
+  - [Score - rmrb2]: 0.14
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+step:5 - global_seqlen/min:239185.000 - global_seqlen/max:287303.000 - global_seqlen/minmax_diff:48118.000 - global_seqlen/balanced_min:261339.000 - global_seqlen/balanced_max:261340.000 - global_seqlen/mean:261339.167 - reward/score_skywork:-13.542 - reward/invalid_format_cnt_skywork:1240.000 - actor/kl_loss:0.002 - actor/kl_coef:0.001 - actor/entropy_loss:1.777 - actor/pg_loss:-0.045 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:1.600 - perf/mfu/actor:0.380 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:102.824 - perf/cpu_memory_used_gb:67.814 - actor/lr:0.000 - val/test_score/tulu-3-wildchat-if-on-policy-8b:-1.256 - val/test_score/PKU-SafeRLHF:-1.025 - val/test_score/SciRIFF-train-mix:-1.232 - val/test_score/RLVR-MATH:-2.899 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-2.278 - val/test_score/DeepWriting-20K:-0.732 - val/test_score/tulu-3-sft-personas-code:2.632 - val/test_score/xlam-function-calling-60k:0.541 - val/test_score/OpenAssistant-oasst1:-1.231 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:-1.528 - val/invalid_format_cnt_rmrb2:3854.000 - critic/score/mean:-13.542 - critic/score/max:20.125 - critic/score/min:-35.750 - critic/rewards/mean:-13.542 - critic/rewards/max:20.125 - critic/rewards/min:-35.750 - critic/advantages/mean:0.108 - critic/advantages/max:2.220 - critic/advantages/min:-2.372 - critic/returns/mean:0.108 - critic/returns/max:2.220 - critic/returns/min:-2.372 - response_length/mean:548.077 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.046 - prompt_length/mean:268.608 - prompt_length/max:1011.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:119.683 - timing_s/old_log_prob:21.512 - timing_s/ref:21.687 - timing_s/adv:80.587 - timing_s/update_actor:104.077 - timing_s/testing:507.625 - timing_s/step:855.307 - timing_per_token_ms/update_actor:0.066 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.051 - timing_per_token_ms/gen:0.114 - perf/total_num_tokens:1568035.000 - perf/time_per_step:855.307 - perf/throughput:305.550
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1338
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 81.05 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:6 - global_seqlen/min:238401.000 - global_seqlen/max:290251.000 - global_seqlen/minmax_diff:51850.000 - global_seqlen/balanced_min:263178.000 - global_seqlen/balanced_max:263179.000 - global_seqlen/mean:263178.833 - reward/score_skywork:-12.120 - reward/invalid_format_cnt_skywork:1338.000 - actor/kl_loss:0.004 - actor/kl_coef:0.001 - actor/entropy_loss:1.620 - actor/pg_loss:-0.050 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:3.619 - perf/mfu/actor:0.387 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:103.811 - perf/cpu_memory_used_gb:67.959 - actor/lr:0.000 - critic/score/mean:-12.120 - critic/score/max:17.125 - critic/score/min:-39.250 - critic/rewards/mean:-12.120 - critic/rewards/max:17.125 - critic/rewards/min:-39.250 - critic/advantages/mean:0.102 - critic/advantages/max:2.237 - critic/advantages/min:-2.345 - critic/returns/mean:0.102 - critic/returns/max:2.237 - critic/returns/min:-2.345 - response_length/mean:544.492 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.044 - prompt_length/mean:277.942 - prompt_length/max:1008.000 - prompt_length/min:65.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:123.248 - timing_s/old_log_prob:22.096 - timing_s/ref:22.246 - timing_s/adv:82.255 - timing_s/update_actor:103.103 - timing_s/step:353.100 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.052 - timing_per_token_ms/gen:0.118 - perf/total_num_tokens:1579073.000 - perf/time_per_step:353.100 - perf/throughput:745.338
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1478
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 84.24 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:7 - global_seqlen/min:236220.000 - global_seqlen/max:277920.000 - global_seqlen/minmax_diff:41700.000 - global_seqlen/balanced_min:262369.000 - global_seqlen/balanced_max:262370.000 - global_seqlen/mean:262369.833 - reward/score_skywork:-12.335 - reward/invalid_format_cnt_skywork:1478.000 - actor/kl_loss:0.004 - actor/kl_coef:0.001 - actor/entropy_loss:1.802 - actor/pg_loss:-0.142 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:2.075 - perf/mfu/actor:0.392 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:105.607 - perf/cpu_memory_used_gb:67.853 - actor/lr:0.000 - critic/score/mean:-12.335 - critic/score/max:17.500 - critic/score/min:-38.000 - critic/rewards/mean:-12.335 - critic/rewards/max:17.500 - critic/rewards/min:-38.000 - critic/advantages/mean:0.083 - critic/advantages/max:2.393 - critic/advantages/min:-2.381 - critic/returns/mean:0.083 - critic/returns/max:2.393 - critic/returns/min:-2.381 - response_length/mean:572.981 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.044 - prompt_length/mean:246.925 - prompt_length/max:983.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:125.662 - timing_s/old_log_prob:21.423 - timing_s/ref:21.659 - timing_s/adv:85.395 - timing_s/update_actor:101.274 - timing_s/step:355.562 - timing_per_token_ms/update_actor:0.064 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.054 - timing_per_token_ms/gen:0.114 - perf/total_num_tokens:1574219.000 - perf/time_per_step:355.562 - perf/throughput:737.901
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1561
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 84.53 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:8 - global_seqlen/min:245160.000 - global_seqlen/max:295408.000 - global_seqlen/minmax_diff:50248.000 - global_seqlen/balanced_min:260849.000 - global_seqlen/balanced_max:260850.000 - global_seqlen/mean:260849.167 - reward/score_skywork:-11.204 - reward/invalid_format_cnt_skywork:1561.000 - actor/kl_loss:0.009 - actor/kl_coef:0.001 - actor/entropy_loss:1.817 - actor/pg_loss:-0.030 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.785 - perf/mfu/actor:0.398 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:105.607 - perf/cpu_memory_used_gb:67.939 - actor/lr:0.000 - critic/score/mean:-11.204 - critic/score/max:19.250 - critic/score/min:-34.000 - critic/rewards/mean:-11.204 - critic/rewards/max:19.250 - critic/rewards/min:-34.000 - critic/advantages/mean:0.091 - critic/advantages/max:2.274 - critic/advantages/min:-2.316 - critic/returns/mean:0.091 - critic/returns/max:2.274 - critic/returns/min:-2.316 - response_length/mean:558.520 - response_length/max:2048.000 - response_length/min:1.000 - response_length/clip_ratio:0.048 - prompt_length/mean:256.633 - prompt_length/max:894.000 - prompt_length/min:67.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:122.402 - timing_s/old_log_prob:21.412 - timing_s/ref:21.541 - timing_s/adv:85.679 - timing_s/update_actor:99.105 - timing_s/step:350.267 - timing_per_token_ms/update_actor:0.063 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.055 - timing_per_token_ms/gen:0.114 - perf/total_num_tokens:1565095.000 - perf/time_per_step:350.267 - perf/throughput:744.716
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1627
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 84.80 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:9 - global_seqlen/min:235214.000 - global_seqlen/max:278724.000 - global_seqlen/minmax_diff:43510.000 - global_seqlen/balanced_min:260142.000 - global_seqlen/balanced_max:260143.000 - global_seqlen/mean:260142.833 - reward/score_skywork:-10.327 - reward/invalid_format_cnt_skywork:1627.000 - actor/kl_loss:0.005 - actor/kl_coef:0.001 - actor/entropy_loss:1.549 - actor/pg_loss:-0.034 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:1.323 - perf/mfu/actor:0.379 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:105.768 - perf/cpu_memory_used_gb:68.119 - actor/lr:0.000 - critic/score/mean:-10.327 - critic/score/max:25.000 - critic/score/min:-31.625 - critic/rewards/mean:-10.327 - critic/rewards/max:25.000 - critic/rewards/min:-31.625 - critic/advantages/mean:0.097 - critic/advantages/max:2.268 - critic/advantages/min:-2.375 - critic/returns/mean:0.097 - critic/returns/max:2.268 - critic/returns/min:-2.375 - response_length/mean:549.713 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.041 - prompt_length/mean:263.233 - prompt_length/max:993.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:122.612 - timing_s/old_log_prob:21.030 - timing_s/ref:21.307 - timing_s/adv:86.293 - timing_s/update_actor:104.038 - timing_s/step:355.413 - timing_per_token_ms/update_actor:0.067 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.055 - timing_per_token_ms/gen:0.116 - perf/total_num_tokens:1560857.000 - perf/time_per_step:355.413 - perf/throughput:731.944
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1683
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 89.81 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 4550
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 188.88 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: 1. Fashion designer creates a line of chameleon clothing that can change colors to match any outfit or occasion.
+2. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+3. Chameleon clothing is used by artists to create unique and dynamic installations.
+4. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+5. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+6. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+7. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+8. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+9. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+10. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+11. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+12. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+13. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+14. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+15. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+16. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+17. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+18. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+19. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+20. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+21. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+22. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+23. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+24. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+25. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+26. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+27. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+28. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+29. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+30. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+31. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+32. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+33. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+34. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+35. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+36. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+37. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+38. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+39. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+40. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+41. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+42. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+43. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+44. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+45. Chameleon clothing is used by photographers to blend in with their surroundings and capture candid shots.
+46. Chameleon clothing is used by makeup artists to create seamless transitions between different looks.
+47. Chameleon clothing is used by dancers to blend in with the stage and create a more immersive experience for the audience.
+48. Chameleon clothing is used by actors to blend in with their surroundings and create more realistic performances.
+49. Chameleon clothing is used by musicians to blend in with the stage and create a more immersive experience for the audience.
+50. Chameleon clothing is used by chefs to blend in with the kitchen and create a more seamless experience for the diners.
+  - [Score - rmrb2]: -4.05 (Penalized for content format)
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+step:10 - global_seqlen/min:261006.000 - global_seqlen/max:285978.000 - global_seqlen/minmax_diff:24972.000 - global_seqlen/balanced_min:272642.000 - global_seqlen/balanced_max:272643.000 - global_seqlen/mean:272642.833 - reward/score_skywork:-10.195 - reward/invalid_format_cnt_skywork:1683.000 - actor/kl_loss:0.007 - actor/kl_coef:0.001 - actor/entropy_loss:1.717 - actor/pg_loss:-0.078 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.497 - perf/mfu/actor:0.380 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.043 - perf/cpu_memory_used_gb:67.784 - actor/lr:0.000 - val/test_score/tulu-3-wildchat-if-on-policy-8b:-0.835 - val/test_score/PKU-SafeRLHF:-0.854 - val/test_score/SciRIFF-train-mix:-0.953 - val/test_score/RLVR-MATH:-2.881 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-1.834 - val/test_score/DeepWriting-20K:-0.277 - val/test_score/tulu-3-sft-personas-code:2.781 - val/test_score/xlam-function-calling-60k:0.512 - val/test_score/OpenAssistant-oasst1:-1.029 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:-1.268 - val/invalid_format_cnt_rmrb2:4550.000 - critic/score/mean:-10.195 - critic/score/max:17.625 - critic/score/min:-32.125 - critic/rewards/mean:-10.195 - critic/rewards/max:17.625 - critic/rewards/min:-32.125 - critic/advantages/mean:0.091 - critic/advantages/max:2.307 - critic/advantages/min:-2.373 - critic/returns/mean:0.091 - critic/returns/max:2.307 - critic/returns/min:-2.373 - response_length/mean:573.451 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.041 - prompt_length/mean:278.558 - prompt_length/max:1016.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:126.338 - timing_s/old_log_prob:22.476 - timing_s/ref:22.644 - timing_s/adv:90.961 - timing_s/update_actor:108.818 - timing_s/testing:504.610 - timing_s/step:875.977 - timing_per_token_ms/update_actor:0.067 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.056 - timing_per_token_ms/gen:0.115 - perf/total_num_tokens:1635857.000 - perf/time_per_step:875.977 - perf/throughput:311.244
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1712
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 88.13 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:11 - global_seqlen/min:243555.000 - global_seqlen/max:300903.000 - global_seqlen/minmax_diff:57348.000 - global_seqlen/balanced_min:268203.000 - global_seqlen/balanced_max:268204.000 - global_seqlen/mean:268203.167 - reward/score_skywork:-9.563 - reward/invalid_format_cnt_skywork:1712.000 - actor/kl_loss:0.005 - actor/kl_coef:0.001 - actor/entropy_loss:1.683 - actor/pg_loss:-0.138 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.619 - perf/mfu/actor:0.388 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.043 - perf/cpu_memory_used_gb:68.136 - actor/lr:0.000 - critic/score/mean:-9.563 - critic/score/max:17.500 - critic/score/min:-33.000 - critic/rewards/mean:-9.563 - critic/rewards/max:17.500 - critic/rewards/min:-33.000 - critic/advantages/mean:0.048 - critic/advantages/max:2.324 - critic/advantages/min:-2.415 - critic/returns/mean:0.048 - critic/returns/max:2.324 - critic/returns/min:-2.415 - response_length/mean:574.472 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.048 - prompt_length/mean:263.663 - prompt_length/max:987.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:121.700 - timing_s/old_log_prob:21.785 - timing_s/ref:21.917 - timing_s/adv:89.265 - timing_s/update_actor:104.635 - timing_s/step:359.442 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.055 - timing_per_token_ms/gen:0.110 - perf/total_num_tokens:1609219.000 - perf/time_per_step:359.442 - perf/throughput:746.165
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1743
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 92.57 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:12 - global_seqlen/min:260483.000 - global_seqlen/max:307790.000 - global_seqlen/minmax_diff:47307.000 - global_seqlen/balanced_min:278949.000 - global_seqlen/balanced_max:278950.000 - global_seqlen/mean:278949.333 - reward/score_skywork:-8.951 - reward/invalid_format_cnt_skywork:1743.000 - actor/kl_loss:0.012 - actor/kl_coef:0.001 - actor/entropy_loss:1.794 - actor/pg_loss:0.024 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.635 - perf/mfu/actor:0.384 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.238 - actor/lr:0.000 - critic/score/mean:-8.951 - critic/score/max:20.750 - critic/score/min:-36.750 - critic/rewards/mean:-8.951 - critic/rewards/max:20.750 - critic/rewards/min:-36.750 - critic/advantages/mean:0.025 - critic/advantages/max:2.347 - critic/advantages/min:-2.375 - critic/returns/mean:0.025 - critic/returns/max:2.347 - critic/returns/min:-2.375 - response_length/mean:573.154 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.043 - prompt_length/mean:298.562 - prompt_length/max:1021.000 - prompt_length/min:65.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:122.258 - timing_s/old_log_prob:22.825 - timing_s/ref:24.268 - timing_s/adv:93.701 - timing_s/update_actor:109.870 - timing_s/step:373.042 - timing_per_token_ms/update_actor:0.066 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.056 - timing_per_token_ms/gen:0.111 - perf/total_num_tokens:1673696.000 - perf/time_per_step:373.042 - perf/throughput:747.770
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1755
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 88.49 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:13 - global_seqlen/min:250184.000 - global_seqlen/max:304439.000 - global_seqlen/minmax_diff:54255.000 - global_seqlen/balanced_min:265090.000 - global_seqlen/balanced_max:265091.000 - global_seqlen/mean:265090.500 - reward/score_skywork:-8.892 - reward/invalid_format_cnt_skywork:1755.000 - actor/kl_loss:0.011 - actor/kl_coef:0.001 - actor/entropy_loss:1.523 - actor/pg_loss:-0.113 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.478 - perf/mfu/actor:0.377 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.132 - actor/lr:0.000 - critic/score/mean:-8.892 - critic/score/max:22.625 - critic/score/min:-30.000 - critic/rewards/mean:-8.892 - critic/rewards/max:22.625 - critic/rewards/min:-30.000 - critic/advantages/mean:0.059 - critic/advantages/max:2.325 - critic/advantages/min:-2.404 - critic/returns/mean:0.059 - critic/returns/max:2.325 - critic/returns/min:-2.404 - response_length/mean:560.716 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.040 - prompt_length/mean:267.692 - prompt_length/max:986.000 - prompt_length/min:67.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:118.988 - timing_s/old_log_prob:22.283 - timing_s/ref:22.385 - timing_s/adv:89.600 - timing_s/update_actor:106.385 - timing_s/step:359.787 - timing_per_token_ms/update_actor:0.067 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.056 - timing_per_token_ms/gen:0.111 - perf/total_num_tokens:1590543.000 - perf/time_per_step:359.787 - perf/throughput:736.798
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1802
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 88.26 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:14 - global_seqlen/min:219831.000 - global_seqlen/max:298099.000 - global_seqlen/minmax_diff:78268.000 - global_seqlen/balanced_min:265493.000 - global_seqlen/balanced_max:265494.000 - global_seqlen/mean:265493.167 - reward/score_skywork:-7.298 - reward/invalid_format_cnt_skywork:1802.000 - actor/kl_loss:0.009 - actor/kl_coef:0.001 - actor/entropy_loss:1.455 - actor/pg_loss:-0.056 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.688 - perf/mfu/actor:0.376 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.356 - actor/lr:0.000 - critic/score/mean:-7.298 - critic/score/max:22.000 - critic/score/min:-29.250 - critic/rewards/mean:-7.298 - critic/rewards/max:22.000 - critic/rewards/min:-29.250 - critic/advantages/mean:0.041 - critic/advantages/max:2.212 - critic/advantages/min:-2.381 - critic/returns/mean:0.041 - critic/returns/max:2.212 - critic/returns/min:-2.381 - response_length/mean:556.958 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.029 - prompt_length/mean:272.708 - prompt_length/max:978.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:125.196 - timing_s/old_log_prob:21.363 - timing_s/ref:21.555 - timing_s/adv:89.397 - timing_s/update_actor:106.692 - timing_s/step:364.326 - timing_per_token_ms/update_actor:0.067 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.056 - timing_per_token_ms/gen:0.117 - perf/total_num_tokens:1592959.000 - perf/time_per_step:364.326 - perf/throughput:728.725
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1819
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 87.12 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 4653
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 181.61 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: 1. **Undercover Operations**: Chameleon clothes can be used by law enforcement and intelligence agencies for undercover missions, blending seamlessly into any environment.
+
+2. **Fashion Show Stunt**: Models can use chameleon clothes to change colors mid-show, creating a stunning visual effect.
+
+3. **Theater and Performance**: Actors can use chameleon clothes to change costumes instantly, reducing the need for multiple outfits.
+
+4. **Art Installation**: Artists can create interactive installations where viewers can change the color of the environment using chameleon clothes.
+
+5. **Virtual Reality Gaming**: Players can use chameleon clothes to blend into virtual environments, enhancing immersion.
+
+6. **Military Camouflage**: Soldiers can use chameleon clothes for better camouflage in various terrains.
+
+7. **Emergency Response**: First responders can use chameleon clothes to blend into disaster zones, making them less visible to the public.
+
+8. **Therapy and Stress Relief**: People can use chameleon clothes to change colors to reduce stress and anxiety.
+
+9. **Fashion Photography**: Models can use chameleon clothes to change colors during photo shoots, creating unique and dynamic images.
+
+10. **Street Art**: Graffiti artists can use chameleon clothes to blend into their surroundings, making it harder for authorities to track them.
+
+11. **Theatrical Effects**: Magicians can use chameleon clothes to create illusions, such as disappearing or changing colors instantly.
+
+12. **Environmental Protection**: Conservationists can use chameleon clothes to blend into natural habitats, reducing their impact on wildlife.
+
+13. **Fashion Design**: Designers can use chameleon clothes to create interactive fashion shows where the clothes change colors based on audience interaction.
+
+14. **Theater Costumes**: Actors can use chameleon clothes to change costumes instantly, reducing the need for multiple outfits.
+
+15. **Virtual Reality Training**: Military and law enforcement can use chameleon clothes in VR training to simulate real-world scenarios.
+
+16. **Fashion Show Stunt**: Models can use chameleon clothes to change colors mid-show, creating a stunning visual effect.
+
+17. **Art Installation**: Artists can create interactive installations where viewers can change the color of the environment using chameleon clothes.
+
+18. **Virtual Reality Gaming**: Players can use chameleon clothes to blend into virtual environments, enhancing immersion.
+
+19. **Military Camouflage**: Soldiers can use chameleon clothes for better camouflage in various terrains.
+
+20. **Emergency Response**: First responders can use chameleon clothes to blend into disaster zones, making them less visible to the public.
+
+21. **Therapy and Stress Relief**: People can use chameleon clothes to change colors to reduce stress and anxiety.
+
+22. **Fashion Photography**: Models can use chameleon clothes to change colors during photo shoots, creating unique and dynamic images.
+
+23. **Street Art**: Graffiti artists can use chameleon clothes to blend into their surroundings, making it harder for authorities to track them.
+
+24. **Theatrical Effects**: Magicians can use chameleon clothes to create illusions, such as disappearing or changing colors instantly.
+
+25. **Environmental Protection**: Conservationists can use chameleon clothes to blend into natural habitats, reducing their impact on wildlife.
+
+26. **Fashion Design**: Designers can use chameleon clothes to create interactive fashion shows where the clothes change colors based on audience interaction.
+
+27. **Theater Costumes**: Actors can use chameleon clothes to change costumes instantly, reducing the need for multiple outfits.
+
+28. **Virtual Reality Training**: Military and law enforcement can use chameleon clothes in VR training to simulate real-world scenarios.
+
+29. **Fashion Show Stunt**: Models can use chameleon clothes to change colors mid-show, creating a stunning visual effect.
+
+30. **Art Installation**: Artists can create interactive installations where viewers can change the color of the environment using chameleon clothes.
+
+31. **Virtual Reality Gaming**: Players can use chameleon clothes to blend into virtual environments, enhancing immersion.
+
+32. **Military Camouflage**: Soldiers can use chameleon clothes for better camouflage in various terrains.
+
+33. **Emergency Response**: First responders can use chameleon clothes to blend into disaster zones, making them less visible to the public.
+
+34. **Therapy and Stress Relief**: People can use chameleon clothes to change colors to reduce stress and anxiety.
+
+35. **Fashion Photography**: Models can use chameleon clothes to change colors during photo shoots, creating unique and dynamic images.
+
+36. **Street Art**: Graffiti artists can use chameleon clothes to blend into their surroundings, making it harder for authorities to track them.
+
+37. **Theatrical Effects**: Magicians can use chameleon clothes to create illusions, such as disappearing or changing colors instantly.
+
+38. **Environmental Protection**: Conservationists can use chameleon clothes to blend into natural habitats, reducing their impact on wildlife.
+
+39. **Fashion Design**: Designers can use chameleon clothes to create interactive fashion shows where the clothes change colors based on audience interaction.
+
+40. **Theater Costumes**: Actors can use chameleon clothes to change costumes instantly, reducing the need for multiple outfits.
+
+41. **Virtual Reality Training**: Military and law enforcement can use chameleon clothes in VR training to simulate real-world scenarios.
+
+42. **Fashion Show Stunt**: Models can use chameleon clothes to change colors mid-show, creating a stunning visual effect.
+
+43. **Art Installation**: Artists can create interactive installations where viewers can change the color of the environment using chameleon clothes.
+
+44. **Virtual Reality Gaming**: Players can use chameleon clothes to blend into virtual environments, enhancing immersion.
+
+45. **Military Camouflage**: Soldiers can use chameleon clothes for better camouflage in various terrains.
+
+46. **Emergency Response**: First responders can use chameleon clothes to blend into disaster zones, making them less visible to the public.
+
+47. **Therapy and Stress Relief**: People can use chameleon clothes to change colors to reduce stress and anxiety.
+
+48. **Fashion Photography**: Models can use chameleon clothes to change colors during photo shoots, creating unique and dynamic images.
+
+49. **Street Art**: Graffiti artists can use chameleon clothes to blend into their surroundings, making it harder for authorities to track them.
+
+50. **Theatrical Effects**: Magicians can use chameleon clothes to create illusions, such as disappearing or changing colors instantly.
+  - [Score - rmrb2]: -1.27 (Penalized for content format)
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+step:15 - global_seqlen/min:231674.000 - global_seqlen/max:283312.000 - global_seqlen/minmax_diff:51638.000 - global_seqlen/balanced_min:259749.000 - global_seqlen/balanced_max:259750.000 - global_seqlen/mean:259749.500 - reward/score_skywork:-6.688 - reward/invalid_format_cnt_skywork:1819.000 - actor/kl_loss:0.009 - actor/kl_coef:0.001 - actor/entropy_loss:1.324 - actor/pg_loss:-0.128 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:2.102 - perf/mfu/actor:0.385 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.385 - actor/lr:0.000 - val/test_score/tulu-3-wildchat-if-on-policy-8b:-0.231 - val/test_score/PKU-SafeRLHF:-0.163 - val/test_score/SciRIFF-train-mix:-0.586 - val/test_score/RLVR-MATH:-1.662 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-1.393 - val/test_score/DeepWriting-20K:0.529 - val/test_score/tulu-3-sft-personas-code:3.384 - val/test_score/xlam-function-calling-60k:0.507 - val/test_score/OpenAssistant-oasst1:-0.578 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:-0.786 - val/invalid_format_cnt_rmrb2:4653.000 - critic/score/mean:-6.688 - critic/score/max:19.250 - critic/score/min:-30.625 - critic/rewards/mean:-6.688 - critic/rewards/max:19.250 - critic/rewards/min:-30.625 - critic/advantages/mean:0.057 - critic/advantages/max:2.274 - critic/advantages/min:-2.348 - critic/returns/mean:0.057 - critic/returns/max:2.274 - critic/returns/min:-2.348 - response_length/mean:534.438 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.024 - prompt_length/mean:277.279 - prompt_length/max:967.000 - prompt_length/min:66.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:119.177 - timing_s/old_log_prob:21.390 - timing_s/ref:21.484 - timing_s/adv:88.241 - timing_s/update_actor:101.959 - timing_s/testing:470.308 - timing_s/step:822.701 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.116 - perf/total_num_tokens:1558497.000 - perf/time_per_step:822.701 - perf/throughput:315.728
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1848
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 86.05 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:16 - global_seqlen/min:232458.000 - global_seqlen/max:278425.000 - global_seqlen/minmax_diff:45967.000 - global_seqlen/balanced_min:254703.000 - global_seqlen/balanced_max:254703.000 - global_seqlen/mean:254703.000 - reward/score_skywork:-6.329 - reward/invalid_format_cnt_skywork:1848.000 - actor/kl_loss:0.015 - actor/kl_coef:0.001 - actor/entropy_loss:1.229 - actor/pg_loss:-0.014 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:0.623 - perf/mfu/actor:0.380 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.438 - actor/lr:0.000 - critic/score/mean:-6.329 - critic/score/max:23.375 - critic/score/min:-32.250 - critic/rewards/mean:-6.329 - critic/rewards/max:23.375 - critic/rewards/min:-32.250 - critic/advantages/mean:0.039 - critic/advantages/max:2.338 - critic/advantages/min:-2.384 - critic/returns/mean:0.039 - critic/returns/max:2.338 - critic/returns/min:-2.384 - response_length/mean:544.847 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.026 - prompt_length/mean:251.100 - prompt_length/max:978.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:116.819 - timing_s/old_log_prob:21.308 - timing_s/ref:21.431 - timing_s/adv:87.187 - timing_s/update_actor:101.199 - timing_s/step:348.083 - timing_per_token_ms/update_actor:0.066 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.112 - perf/total_num_tokens:1528218.000 - perf/time_per_step:348.083 - perf/throughput:731.731
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1871
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 92.05 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:17 - global_seqlen/min:258783.000 - global_seqlen/max:294420.000 - global_seqlen/minmax_diff:35637.000 - global_seqlen/balanced_min:274279.000 - global_seqlen/balanced_max:274280.000 - global_seqlen/mean:274279.500 - reward/score_skywork:-4.064 - reward/invalid_format_cnt_skywork:1871.000 - actor/kl_loss:0.020 - actor/kl_coef:0.001 - actor/entropy_loss:1.267 - actor/pg_loss:-0.089 - actor/pg_clipfrac:0.000 - actor/ppo_kl:-0.000 - actor/grad_norm:0.474 - perf/mfu/actor:0.386 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.389 - actor/lr:0.000 - critic/score/mean:-4.064 - critic/score/max:26.375 - critic/score/min:-26.750 - critic/rewards/mean:-4.064 - critic/rewards/max:26.375 - critic/rewards/min:-26.750 - critic/advantages/mean:0.058 - critic/advantages/max:2.256 - critic/advantages/min:-2.427 - critic/returns/mean:0.058 - critic/returns/max:2.256 - critic/returns/min:-2.427 - response_length/mean:556.965 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.020 - prompt_length/mean:300.158 - prompt_length/max:1019.000 - prompt_length/min:70.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:128.007 - timing_s/old_log_prob:22.037 - timing_s/ref:22.175 - timing_s/adv:93.200 - timing_s/update_actor:107.344 - timing_s/step:372.924 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.013 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.120 - perf/total_num_tokens:1645677.000 - perf/time_per_step:372.924 - perf/throughput:735.484
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1861
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 87.17 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:18 - global_seqlen/min:232187.000 - global_seqlen/max:284922.000 - global_seqlen/minmax_diff:52735.000 - global_seqlen/balanced_min:261118.000 - global_seqlen/balanced_max:261119.000 - global_seqlen/mean:261118.333 - reward/score_skywork:-4.202 - reward/invalid_format_cnt_skywork:1861.000 - actor/kl_loss:0.021 - actor/kl_coef:0.001 - actor/entropy_loss:1.317 - actor/pg_loss:-0.058 - actor/pg_clipfrac:0.000 - actor/ppo_kl:0.000 - actor/grad_norm:0.511 - perf/mfu/actor:0.393 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.363 - actor/lr:0.000 - critic/score/mean:-4.202 - critic/score/max:22.250 - critic/score/min:-27.375 - critic/rewards/mean:-4.202 - critic/rewards/max:22.250 - critic/rewards/min:-27.375 - critic/advantages/mean:0.038 - critic/advantages/max:2.267 - critic/advantages/min:-2.388 - critic/returns/mean:0.038 - critic/returns/max:2.267 - critic/returns/min:-2.388 - response_length/mean:534.866 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.018 - prompt_length/mean:281.129 - prompt_length/max:1001.000 - prompt_length/min:69.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:122.140 - timing_s/old_log_prob:21.093 - timing_s/ref:21.534 - timing_s/adv:88.315 - timing_s/update_actor:100.337 - timing_s/step:353.547 - timing_per_token_ms/update_actor:0.064 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.056 - timing_per_token_ms/gen:0.119 - perf/total_num_tokens:1566710.000 - perf/time_per_step:353.547 - perf/throughput:738.568
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1877
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 90.76 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:19 - global_seqlen/min:247730.000 - global_seqlen/max:281651.000 - global_seqlen/minmax_diff:33921.000 - global_seqlen/balanced_min:268186.000 - global_seqlen/balanced_max:268186.000 - global_seqlen/mean:268186.000 - reward/score_skywork:-4.041 - reward/invalid_format_cnt_skywork:1877.000 - actor/kl_loss:0.015 - actor/kl_coef:0.001 - actor/entropy_loss:1.203 - actor/pg_loss:0.027 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:0.594 - perf/mfu/actor:0.387 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:68.410 - actor/lr:0.000 - critic/score/mean:-4.041 - critic/score/max:32.250 - critic/score/min:-27.375 - critic/rewards/mean:-4.041 - critic/rewards/max:32.250 - critic/rewards/min:-27.375 - critic/advantages/mean:0.032 - critic/advantages/max:2.213 - critic/advantages/min:-2.386 - critic/returns/mean:0.032 - critic/returns/max:2.213 - critic/returns/min:-2.386 - response_length/mean:561.344 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.009 - prompt_length/mean:276.737 - prompt_length/max:997.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:125.289 - timing_s/old_log_prob:21.941 - timing_s/ref:22.131 - timing_s/adv:91.907 - timing_s/update_actor:104.547 - timing_s/step:365.945 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.116 - perf/total_num_tokens:1609116.000 - perf/time_per_step:365.945 - perf/throughput:732.859
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1896
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 91.18 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 4692
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 183.26 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: Certainly! Here are 50 ideas for using chameleon clothes for fun and profit in a hard sci-fi setting:
+
+### For Fun:
+1. **Disguise Parties**: Attend events where everyone is dressed in the same color, but each person has a unique pattern or texture.
+2. **Escape Games**: Participate in escape rooms where the goal is to blend in and avoid detection.
+3. **Fashion Shows**: Model clothes that change color and texture to match the theme of the show.
+4. **Art Installations**: Create interactive art pieces where viewers can change the environment's colors and textures.
+5. **Virtual Reality Experiences**: Use chameleon clothes to enhance VR experiences by changing the surroundings dynamically.
+6. **Escape from Prison**: Escape from a virtual prison by blending in with the environment.
+7. **Hide-and-Seek**: Play hide-and-seek in large open spaces where traditional hiding spots are easily found.
+8. **Museum Tours**: Visit museums without being noticed by security guards.
+9. **Secret Meetings**: Hold secret meetings in public places without being seen.
+10. **Spy Games**: Engage in spy games where the goal is to blend in and gather information.
+
+### For Profit:
+11. **Security Services**: Offer security services where agents can blend in with crowds to monitor events.
+12. **Surveillance**: Provide surveillance services where agents can blend in and gather intelligence.
+13. **Theft**: Specialize in high-value thefts where blending in is crucial.
+14. **Counterfeiting**: Create counterfeit currency or goods that blend in with real ones.
+15. **Drug Trafficking**: Transport drugs through checkpoints by blending in with the environment.
+16. **Human Trafficking**: Transport people across borders by blending in with the environment.
+17. **Cybersecurity**: Use chameleon clothes to blend in with online communities to gather intelligence.
+18. **Data Mining**: Gather data from public places by blending in with the crowd.
+19. **Investigative Journalism**: Investigate stories by blending in with the environment.
+20. **Real Estate**: Blend in with potential buyers or sellers to gather information.
+21. **Investment Banking**: Blend in with clients to gather information.
+22. **Insurance Fraud**: Blend in with victims to gather information.
+23. **Legal Services**: Blend in with witnesses or suspects to gather information.
+24. **Medical Research**: Blend in with patients to gather information.
+25. **Military Operations**: Blend in with enemy forces to gather intelligence.
+26. **Police Work**: Blend in with criminals to gather information.
+27. **Firefighting**: Blend in with crowds to gather information.
+28. **Emergency Services**: Blend in with victims to gather information.
+29. **Environmental Monitoring**: Blend in with wildlife to gather information.
+30. **Agriculture**: Blend in with crops to gather information.
+31. **Mining**: Blend in with minerals to gather information.
+32. **Construction**: Blend in with buildings to gather information.
+33. **Transportation**: Blend in with vehicles to gather information.
+34. **Entertainment Industry**: Blend in with celebrities to gather information.
+35. **Fashion Industry**: Blend in with models to gather information.
+36. **Food Industry**: Blend in with restaurants to gather information.
+37. **Retail Industry**: Blend in with shoppers to gather information.
+38. **Travel Industry**: Blend in with tourists to gather information.
+39. **Education Industry**: Blend in with students to gather information.
+40. **Healthcare Industry**: Blend in with patients to gather information.
+41. **Technology Industry**: Blend in with tech enthusiasts to gather information.
+42. **Energy Industry**: Blend in with power plants to gather information.
+43. **Water Industry**: Blend in with water treatment facilities to gather information.
+44. **Waste Management Industry**: Blend in with waste disposal sites to gather information.
+45. **Public Works Industry**: Blend in with construction sites to gather information.
+46. **Infrastructure Industry**: Blend in with bridges and tunnels to gather information.
+47. **Aerospace Industry**: Blend in with airports to gather information.
+48. **Maritime Industry**: Blend in with ships to gather information.
+49. **Agricultural Equipment Industry**: Blend in with farmers to gather information.
+50. **Automotive Industry**: Blend in with car dealerships to gather information.
+
+These ideas cover a wide range of activities, from personal enjoyment to professional pursuits, leveraging the unique capabilities of chameleon clothes in a hard sci-fi setting.
+  - [Score - rmrb2]: -0.15 (Penalized for content format)
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+local_global_step_folder: /workspace/models/checkpoints/reward_model_chat_grpo_qwen2-5_7b/skywork_exp1_VR/global_step_20
+step:20 - global_seqlen/min:234330.000 - global_seqlen/max:303190.000 - global_seqlen/minmax_diff:68860.000 - global_seqlen/balanced_min:269617.000 - global_seqlen/balanced_max:269618.000 - global_seqlen/mean:269617.667 - reward/score_skywork:-1.663 - reward/invalid_format_cnt_skywork:1896.000 - actor/kl_loss:0.029 - actor/kl_coef:0.001 - actor/entropy_loss:1.066 - actor/pg_loss:-0.049 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:0.806 - perf/mfu/actor:0.394 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:67.898 - actor/lr:0.000 - val/test_score/tulu-3-wildchat-if-on-policy-8b:0.354 - val/test_score/PKU-SafeRLHF:0.193 - val/test_score/SciRIFF-train-mix:-0.134 - val/test_score/RLVR-MATH:0.653 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-0.793 - val/test_score/DeepWriting-20K:1.007 - val/test_score/tulu-3-sft-personas-code:3.717 - val/test_score/xlam-function-calling-60k:0.234 - val/test_score/OpenAssistant-oasst1:-0.019 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:-0.279 - val/invalid_format_cnt_rmrb2:4692.000 - critic/score/mean:-1.663 - critic/score/max:26.750 - critic/score/min:-24.875 - critic/rewards/mean:-1.663 - critic/rewards/max:26.750 - critic/rewards/min:-24.875 - critic/advantages/mean:0.037 - critic/advantages/max:2.246 - critic/advantages/min:-2.342 - critic/returns/mean:0.037 - critic/returns/max:2.246 - critic/returns/min:-2.342 - response_length/mean:567.747 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.012 - prompt_length/mean:274.808 - prompt_length/max:995.000 - prompt_length/min:67.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:122.129 - timing_s/old_log_prob:21.927 - timing_s/ref:22.070 - timing_s/adv:92.337 - timing_s/update_actor:103.348 - timing_s/testing:437.744 - timing_s/save_checkpoint:38.921 - timing_s/step:838.618 - timing_per_token_ms/update_actor:0.064 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.112 - perf/total_num_tokens:1617706.000 - perf/time_per_step:838.618 - perf/throughput:321.502
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1894
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 89.44 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:21 - global_seqlen/min:247932.000 - global_seqlen/max:282622.000 - global_seqlen/minmax_diff:34690.000 - global_seqlen/balanced_min:263273.000 - global_seqlen/balanced_max:263274.000 - global_seqlen/mean:263273.167 - reward/score_skywork:-2.311 - reward/invalid_format_cnt_skywork:1894.000 - actor/kl_loss:0.028 - actor/kl_coef:0.001 - actor/entropy_loss:1.112 - actor/pg_loss:0.004 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:0.555 - perf/mfu/actor:0.384 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:69.752 - actor/lr:0.000 - critic/score/mean:-2.311 - critic/score/max:27.000 - critic/score/min:-23.250 - critic/rewards/mean:-2.311 - critic/rewards/max:27.000 - critic/rewards/min:-23.250 - critic/advantages/mean:0.021 - critic/advantages/max:2.373 - critic/advantages/min:-2.445 - critic/returns/mean:0.021 - critic/returns/max:2.373 - critic/returns/min:-2.445 - response_length/mean:565.858 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.005 - prompt_length/mean:256.871 - prompt_length/max:995.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:118.842 - timing_s/old_log_prob:21.322 - timing_s/ref:21.709 - timing_s/adv:90.625 - timing_s/update_actor:103.291 - timing_s/step:355.931 - timing_per_token_ms/update_actor:0.065 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.109 - perf/total_num_tokens:1579639.000 - perf/time_per_step:355.931 - perf/throughput:739.674
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1896
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 88.22 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:22 - global_seqlen/min:249269.000 - global_seqlen/max:271318.000 - global_seqlen/minmax_diff:22049.000 - global_seqlen/balanced_min:261742.000 - global_seqlen/balanced_max:261743.000 - global_seqlen/mean:261742.167 - reward/score_skywork:-1.470 - reward/invalid_format_cnt_skywork:1896.000 - actor/kl_loss:0.055 - actor/kl_coef:0.001 - actor/entropy_loss:1.085 - actor/pg_loss:-0.007 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:2.333 - perf/mfu/actor:0.380 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.467 - perf/cpu_memory_used_gb:69.462 - actor/lr:0.000 - critic/score/mean:-1.470 - critic/score/max:31.750 - critic/score/min:-32.375 - critic/rewards/mean:-1.470 - critic/rewards/max:31.750 - critic/rewards/min:-32.375 - critic/advantages/mean:0.039 - critic/advantages/max:2.367 - critic/advantages/min:-2.469 - critic/returns/mean:0.039 - critic/returns/max:2.367 - critic/returns/min:-2.469 - response_length/mean:562.094 - response_length/max:2048.000 - response_length/min:3.000 - response_length/clip_ratio:0.009 - prompt_length/mean:255.850 - prompt_length/max:1019.000 - prompt_length/min:67.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:119.845 - timing_s/old_log_prob:21.165 - timing_s/ref:21.310 - timing_s/adv:89.353 - timing_s/update_actor:103.819 - timing_s/step:355.637 - timing_per_token_ms/update_actor:0.066 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.111 - perf/total_num_tokens:1570453.000 - perf/time_per_step:355.637 - perf/throughput:735.982
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1901
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 94.36 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:23 - global_seqlen/min:256836.000 - global_seqlen/max:315139.000 - global_seqlen/minmax_diff:58303.000 - global_seqlen/balanced_min:277535.000 - global_seqlen/balanced_max:277536.000 - global_seqlen/mean:277535.667 - reward/score_skywork:-0.086 - reward/invalid_format_cnt_skywork:1901.000 - actor/kl_loss:0.043 - actor/kl_coef:0.001 - actor/entropy_loss:1.071 - actor/pg_loss:-0.078 - actor/pg_clipfrac:0.001 - actor/ppo_kl:-0.000 - actor/grad_norm:0.614 - perf/mfu/actor:0.405 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.693 - perf/cpu_memory_used_gb:69.361 - actor/lr:0.000 - critic/score/mean:-0.086 - critic/score/max:35.750 - critic/score/min:-30.375 - critic/rewards/mean:-0.086 - critic/rewards/max:35.750 - critic/rewards/min:-30.375 - critic/advantages/mean:0.026 - critic/advantages/max:2.385 - critic/advantages/min:-2.371 - critic/returns/mean:0.026 - critic/returns/max:2.385 - critic/returns/min:-2.371 - response_length/mean:586.561 - response_length/max:2048.000 - response_length/min:17.000 - response_length/clip_ratio:0.008 - prompt_length/mean:280.737 - prompt_length/max:1017.000 - prompt_length/min:71.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:137.466 - timing_s/old_log_prob:22.120 - timing_s/ref:23.761 - timing_s/adv:95.491 - timing_s/update_actor:103.328 - timing_s/step:382.298 - timing_per_token_ms/update_actor:0.062 - timing_per_token_ms/ref:0.014 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.122 - perf/total_num_tokens:1665214.000 - perf/time_per_step:382.298 - perf/throughput:725.966
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1910
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 97.00 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:24 - global_seqlen/min:270949.000 - global_seqlen/max:314099.000 - global_seqlen/minmax_diff:43150.000 - global_seqlen/balanced_min:283970.000 - global_seqlen/balanced_max:283971.000 - global_seqlen/mean:283970.333 - reward/score_skywork:1.641 - reward/invalid_format_cnt_skywork:1910.000 - actor/kl_loss:0.040 - actor/kl_coef:0.001 - actor/entropy_loss:0.816 - actor/pg_loss:-0.093 - actor/pg_clipfrac:0.001 - actor/ppo_kl:-0.000 - actor/grad_norm:0.560 - perf/mfu/actor:0.405 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.949 - perf/cpu_memory_used_gb:69.286 - actor/lr:0.000 - critic/score/mean:1.641 - critic/score/max:34.500 - critic/score/min:-26.125 - critic/rewards/mean:1.641 - critic/rewards/max:34.500 - critic/rewards/min:-26.125 - critic/advantages/mean:0.028 - critic/advantages/max:2.311 - critic/advantages/min:-2.339 - critic/returns/mean:0.028 - critic/returns/max:2.311 - critic/returns/min:-2.339 - response_length/mean:633.503 - response_length/max:2048.000 - response_length/min:6.000 - response_length/clip_ratio:0.009 - prompt_length/mean:253.904 - prompt_length/max:1014.000 - prompt_length/min:66.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:132.365 - timing_s/old_log_prob:24.122 - timing_s/ref:22.998 - timing_s/adv:98.172 - timing_s/update_actor:105.825 - timing_s/step:383.613 - timing_per_token_ms/update_actor:0.062 - timing_per_token_ms/ref:0.013 - timing_per_token_ms/adv:0.058 - timing_per_token_ms/gen:0.109 - perf/total_num_tokens:1703822.000 - perf/time_per_step:383.613 - perf/throughput:740.253
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1913
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 94.44 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['rmrb2'] reward manager call...
+[rmrb2] invalid content format count in batch: 4702
+Sending 4733 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4733)
+Total time for current batch: 208.27 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: Certainly! Here are 50 creative ideas for using chameleon clothes for both fun and profit in a hard sci-fi setting:
+
+### For Fun:
+1. **Disguise Parties**: Host parties where guests wear chameleon clothes to blend into different environments or themes.
+2. **Escape Games**: Create escape rooms where participants must use their chameleon clothes to hide from clues or enemies.
+3. **Fashion Shows**: Model shows where models change colors to match the stage or audience preferences.
+4. **Art Installations**: Use chameleon clothes to create interactive art installations that respond to viewers' movements.
+5. **Virtual Reality Experiences**: Design VR experiences where users wear chameleon clothes to blend into virtual environments.
+6. **Escape from Prison**: A game where players must escape a prison by blending in with the surroundings.
+7. **Hide-and-Seek**: A modern twist on the classic game, using chameleon clothes to make hiding more challenging and fun.
+8. **Museum Tours**: Guides wear chameleon clothes to blend into exhibits, creating an immersive experience.
+9. **Theater Performances**: Actors use chameleon clothes to seamlessly transition between scenes and characters.
+10. **Sports Events**: Athletes wear chameleon clothes to blend into the crowd, making it harder for fans to spot them.
+
+### For Profit:
+11. **Security Services**: Offer chameleon clothing for security personnel to blend into crowds and monitor areas without being noticed.
+12. **Surveillance**: Sell chameleon clothes to law enforcement for covert operations and surveillance missions.
+13. **Military Applications**: Develop chameleon uniforms for soldiers to blend into various terrains and environments.
+14. **Counterintelligence**: Provide chameleon clothes for intelligence agents to infiltrate enemy groups undetected.
+15. **Thieves Guild**: Create a black market for chameleon clothes, catering to thieves who need to blend into high-security areas.
+16. **Corporate Espionage**: Offer chameleon clothes to corporate spies for gathering information in competitive environments.
+17. **Tourism**: Sell chameleon clothes to tourists for blending into local cultures and avoiding unwanted attention.
+18. **Photography**: Provide chameleon clothes for photographers to blend into backgrounds and capture candid shots.
+19. **Film Industry**: Use chameleon clothes for actors to blend into sets and avoid detection by special effects teams.
+20. **Fashion Design**: Create high-end fashion lines using chameleon fabrics, appealing to those who value exclusivity and novelty.
+
+### For Fun:
+21. **Gaming**: Develop video games where players wear chameleon clothes to blend into levels and complete objectives.
+22. **Escape Rooms**: Create escape rooms where players must use chameleon clothes to blend into clues and solve puzzles.
+23. **Art Galleries**: Host art gallery openings where attendees wear chameleon clothes to blend into the exhibits.
+24. **Theater**: Design chameleon costumes for actors to seamlessly switch between roles and scenes.
+25. **Sports**: Create chameleon uniforms for athletes to blend into crowds and avoid distractions.
+26. **Music Festivals**: Offer chameleon clothes for attendees to blend into the crowd and enjoy the festival without being noticed.
+27. **Conventions**: Provide chameleon clothes for attendees to blend into convention halls and avoid being overwhelmed by crowds.
+28. **Theme Parks**: Use chameleon clothes for performers and staff to blend into attractions and enhance the immersive experience.
+29. **Amusement Parks**: Create chameleon costumes for characters and performers to blend into rides and shows.
+30. **Water Parks**: Develop chameleon swimsuits for water park visitors to blend into the aquatic environment.
+
+### For Profit:
+31. **Security Companies**: Offer chameleon clothes for security guards to blend into high-security areas and protect assets.
+32. **Surveillance Firms**: Provide chameleon clothes for private investigators and surveillance teams to blend into environments and gather intelligence.
+33. **Military Contractors**: Develop chameleon uniforms for special forces and covert operations.
+34. **Intelligence Agencies**: Offer chameleon clothes for intelligence operatives to blend into enemy territories and gather information.
+35. **Thief Guilds**: Create a black market for chameleon clothes, catering to professional thieves.
+36. **Corporate Spies**: Develop chameleon clothes for corporate spies to infiltrate rival companies and gather competitive intelligence.
+37. **Tourism Agencies**: Provide chameleon clothes for tourists to blend into local cultures and avoid cultural faux pas.
+38. **Photography Studios**: Offer chameleon clothes for photographers to blend into backgrounds and capture candid shots.
+39. **Film Production Companies**: Create chameleon costumes for actors to blend into sets and avoid detection by special effects teams.
+40. **Fashion Design Houses**: Develop high-end fashion lines using chameleon fabrics, appealing to the fashion-forward elite.
+
+### For Fun:
+41. **Gaming Conventions**: Host gaming conventions where attendees wear chameleon clothes to blend into the event and enjoy the festivities.
+42. **Escape Room Competitions**: Organize escape room competitions where teams must use chameleon clothes to blend into clues and solve puzzles.
+43. **Art Exhibitions**: Host art exhibitions where artists wear chameleon clothes to blend into the exhibits and create interactive installations.
+44. **Theater Festivals**: Develop chameleon costumes for actors to blend into scenes and enhance the immersive experience.
+45. **Sports Events**: Create chameleon uniforms for athletes to blend into crowds and avoid distractions during competitions.
+46. **Music Festivals**: Offer chameleon clothes for attendees to blend into the crowd and enjoy the festival without being overwhelmed.
+47. **Conventions**: Provide chameleon clothes for attendees to blend into convention halls and avoid being overwhelmed by crowds.
+48. **Theme Parks**: Use chameleon clothes for performers and staff to blend into attractions and enhance the immersive experience.
+49. **Amusement Parks**: Create chameleon costumes for characters and performers to blend into rides and shows.
+50. **Water Parks**: Develop chameleon swimsuits for water park visitors to blend into the aquatic environment and enjoy the water activities.
+
+These ideas showcase the versatility and potential of chameleon clothes in both recreational and professional settings, offering endless opportunities for fun and profit in a hard sci-fi world.
+  - [Score - rmrb2]: 1.38 (Penalized for content format)
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+step:25 - global_seqlen/min:238653.000 - global_seqlen/max:306039.000 - global_seqlen/minmax_diff:67386.000 - global_seqlen/balanced_min:277670.000 - global_seqlen/balanced_max:277670.000 - global_seqlen/mean:277670.000 - reward/score_skywork:1.186 - reward/invalid_format_cnt_skywork:1913.000 - actor/kl_loss:0.047 - actor/kl_coef:0.001 - actor/entropy_loss:0.905 - actor/pg_loss:-0.055 - actor/pg_clipfrac:0.001 - actor/ppo_kl:-0.000 - actor/grad_norm:0.547 - perf/mfu/actor:0.402 - perf/max_memory_allocated_gb:70.314 - perf/max_memory_reserved_gb:106.949 - perf/cpu_memory_used_gb:69.373 - actor/lr:0.000 - val/test_score/tulu-3-wildchat-if-on-policy-8b:0.913 - val/test_score/PKU-SafeRLHF:0.599 - val/test_score/SciRIFF-train-mix:0.686 - val/test_score/RLVR-MATH:1.387 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-0.230 - val/test_score/DeepWriting-20K:1.460 - val/test_score/tulu-3-sft-personas-code:4.067 - val/test_score/xlam-function-calling-60k:1.036 - val/test_score/OpenAssistant-oasst1:0.512 - val/test_score/tulu-3-ultrafeedback-cleaned-on-policy-8b:0.053 - val/invalid_format_cnt_rmrb2:4702.000 - critic/score/mean:1.186 - critic/score/max:23.625 - critic/score/min:-25.125 - critic/rewards/mean:1.186 - critic/rewards/max:23.625 - critic/rewards/min:-25.125 - critic/advantages/mean:0.020 - critic/advantages/max:2.334 - critic/advantages/min:-2.406 - critic/returns/mean:0.020 - critic/returns/max:2.334 - critic/returns/min:-2.406 - response_length/mean:612.006 - response_length/max:2048.000 - response_length/min:2.000 - response_length/clip_ratio:0.006 - prompt_length/mean:255.712 - prompt_length/max:1008.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:134.440 - timing_s/old_log_prob:22.008 - timing_s/ref:22.160 - timing_s/adv:95.587 - timing_s/update_actor:104.104 - timing_s/testing:490.504 - timing_s/step:868.936 - timing_per_token_ms/update_actor:0.062 - timing_per_token_ms/ref:0.013 - timing_per_token_ms/adv:0.057 - timing_per_token_ms/gen:0.114 - perf/total_num_tokens:1666020.000 - perf/time_per_step:868.936 - perf/throughput:319.552
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1916
+Sending 1920 requests to skywork/classify with batch size 64...
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 1920)
+Total time for current batch: 103.84 seconds
+==================================================
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+INFO: Using reward from 'skywork' for PPO training.
+step:26 - global_seqlen/min:289509.000 - global_seqlen/max:325903.000 - global_seqlen/minmax_diff:36394.000 - global_seqlen/balanced_min:302246.000 - global_seqlen/balanced_max:302247.000 - global_seqlen/mean:302246.667 - reward/score_skywork:2.513 - reward/invalid_format_cnt_skywork:1916.000 - actor/kl_loss:0.048 - actor/kl_coef:0.001 - actor/entropy_loss:0.821 - actor/pg_loss:-0.006 - actor/pg_clipfrac:0.001 - actor/ppo_kl:0.000 - actor/grad_norm:0.363 - perf/mfu/actor:0.419 - perf/max_memory_allocated_gb:70.500 - perf/max_memory_reserved_gb:106.949 - perf/cpu_memory_used_gb:69.640 - actor/lr:0.000 - critic/score/mean:2.513 - critic/score/max:31.750 - critic/score/min:-24.250 - critic/rewards/mean:2.513 - critic/rewards/max:31.750 - critic/rewards/min:-24.250 - critic/advantages/mean:0.016 - critic/advantages/max:2.323 - critic/advantages/min:-2.391 - critic/returns/mean:0.016 - critic/returns/max:2.323 - critic/returns/min:-2.391 - response_length/mean:678.200 - response_length/max:2048.000 - response_length/min:37.000 - response_length/clip_ratio:0.004 - prompt_length/mean:266.321 - prompt_length/max:992.000 - prompt_length/min:68.000 - prompt_length/clip_ratio:0.000 - timing_s/gen:137.102 - timing_s/old_log_prob:23.713 - timing_s/ref:24.074 - timing_s/adv:105.067 - timing_s/update_actor:108.967 - timing_s/step:399.073 - timing_per_token_ms/update_actor:0.060 - timing_per_token_ms/ref:0.013 - timing_per_token_ms/adv:0.058 - timing_per_token_ms/gen:0.105 - perf/total_num_tokens:1813480.000 - perf/time_per_step:399.073 - perf/throughput:757.372
+start ['skywork'] reward manager call...
+[skywork] invalid content format count in batch: 1904
+Sending 1920 requests to skywork/classify with batch size 64...

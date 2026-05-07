@@ -1,0 +1,7 @@
+{"time":"2026-01-04T06:42:21.262214836Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/wandb/run-20260104_064221-g26d2gut/logs/debug-core.log"}
+{"time":"2026-01-04T06:42:22.220156041Z","level":"INFO","msg":"created new stream","id":"g26d2gut"}
+{"time":"2026-01-04T06:42:22.220191899Z","level":"INFO","msg":"stream: started","id":"g26d2gut"}
+{"time":"2026-01-04T06:42:22.220216846Z","level":"INFO","msg":"handler: started","stream_id":"g26d2gut"}
+{"time":"2026-01-04T06:42:22.220223802Z","level":"INFO","msg":"sender: started","stream_id":"g26d2gut"}
+{"time":"2026-01-04T06:42:22.22024257Z","level":"INFO","msg":"writer: Do: started","stream_id":"g26d2gut"}
+{"time":"2026-01-04T06:42:22.837606076Z","level":"INFO","msg":"Starting system monitor"}

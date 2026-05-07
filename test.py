@@ -1,249 +1,91 @@
-import requests
 import json
-import time
+import os
+import google.generativeai as genai
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
 
-###############################skywork##########################
-HOST_URL = "http://127.0.0.1:30004" 
-INFERENCE_URL = HOST_URL + "/classify"
+# --- 配置部分 ---
+API_KEY = "AIzaSyC3g4Kk709e_72pUH7fEJpVz-tfJOiYyCI"  # 请替换为你的 API Key
+INPUT_FILE = "D:\verl-0.3.0.post1-ws\verl\data_deduplicated.json"
+OUTPUT_FILE = "D:\verl-0.3.0.post1-ws\verl\data_with_gemini_judge.json"
+CONCURRENT_WORKERS = 5  # 设置并发数，注意 API 的 Rate Limit
 
-# 待评分的问题
-PROMPT = "什么是神经网络中Sigmoid节点的数值输出范围？"
+# 初始化 Gemini
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-2.5-flash') # 或者 'gemini-1.5-flash' 速度更快
 
-# 两个不同的响应，用于比较评分
-RESPONSE_1 = "Sigmoid节点的输出范围在-1到1之间。"
-RESPONSE_2 = "Sigmoid节点的输出范围在0到1之间。"
-# =================================================================
+def get_gemini_response(item):
+    """
+    为单个 item 调用 Gemini 接口
+    """
+    question = item.get("prompt", "")
+    cot_a = item.get("think", "")
+    cot_b = item.get("baseline_think", "")
 
-``
-# --- 关键修改：扁平化对话结构 ---
-# 将对话对格式化为模型可接受的单一文本格式
-def format_conversation(prompt, response):
-    """将 Prompt 和 Response 格式化为 InternLM2 奖励模型通常接受的单行文本。"""
-    # 奖励模型通常需要角色标签来区分输入
-    return f"Human: {prompt}\nAssistant: {response}"
+    # 组装 Prompt
+    prompt = f"""You are a professional logical reasoning evaluator.
+Please compare two Chain-of-Thought (CoT) reasoning processes for the same question.
 
-# 构造请求体数据，使用服务器要求的 "text" 字段
-request_data = {
-    # "text" 字段包含一个列表，列表中的每一项是要评分的完整文本
-    "text": [
-        format_conversation(PROMPT, RESPONSE_1), # 第一个要评分的文本
-        format_conversation(PROMPT, RESPONSE_2), # 第二个要评分的文本
-    ],
-}
-# -----------------------------------
+Question: {question}
 
+Chain-of-Thought A: {cot_a}
 
-def send_score_request():
-    """发送评分请求并处理响应。"""
-    print(f"[{time.strftime('%H:%M:%S')}] 正在向 {INFERENCE_URL} 发送评分请求...")
-    print(f"请求内容：对两个 Assistant 响应进行评分...")
+Chain-of-Thought B: {cot_b}
+
+Task: Determine which CoT is better in terms of logical rigor, clarity, and depth of reasoning. 
+Constraint: Output ONLY the character "A" or "B". No other text.
+
+Result:"""
 
     try:
-        response = requests.post(
-            INFERENCE_URL,
-            json=request_data,
-            headers={"Content-Type": "application/json"},
-            timeout=15 # 增加超时时间以应对模型加载
+        # 使用 generation_config 强制模型尽量简洁并设置 temperature 为 0
+        response = model.generate_content(
+            prompt,
+            generation_config=genai.types.GenerationConfig(
+                candidate_count=1,
+                max_output_tokens=2,
+                temperature=0.0
+            )
         )
-        response.raise_for_status()
+        result = response.text.strip().upper()
+        # 简单清洗，只保留 A 或 B
+        if 'A' in result: final_res = "A"
+        elif 'B' in result: final_res = "B"
+        else: final_res = result # 原样返回异常输出以便后续排查
         
-        response_data = response.json()
+        print(f"Prompt: {question[:30]}... | Result: {final_res}")
+        return final_res
+    except Exception as e:
+        print(f"Error processing item: {e}")
+        return "Error"
+
+def main():
+    # 1. 读取数据
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    print(f"总计加载 {len(data)} 条数据，准备调用 Gemini API (并发数: {CONCURRENT_WORKERS})...")
+
+    # 2. 使用线程池并发执行
+    results = []
+    with ThreadPoolExecutor(max_workers=CONCURRENT_WORKERS) as executor:
+        # 提交所有任务
+        future_to_item = {executor.submit(get_gemini_response, item): item for item in data}
         
-        print("\n--- API 响应成功 ---")
-        
-        # 奖励模型返回的格式可能仍然是列表，我们保持提取逻辑不变
-        if isinstance(response_data, list):
-            scores = [x.get("embedding", "N/A") for x in response_data]
+        # 按照完成顺序收集结果
+        for future in tqdm(as_completed(future_to_item), total=len(data)):
+            item = future_to_item[future]
+            try:
+                # 获取 Gemini 的输出并存入新字段 result
+                item["result"] = future.result()
+            except Exception as e:
+                item["result"] = f"Exception: {e}"
 
-            print(f"原始响应：{json.dumps(response_data, indent=4, ensure_ascii=False)}")
-            print("\n==============================")
-            print(f"问题: {PROMPT}")
-            print("==============================")
-            print(f"响应 1 (错误, -1到1): {RESPONSE_1}")
-            print(f"得分 1: {scores[0]}")
-            print("-" * 30)
-            print(f"响应 2 (正确, 0到1): {RESPONSE_2}")
-            print(f"得分 2: {scores[1]}")
-            print("==============================")
-            print("\n诊断：得分越高的响应，奖励模型认为质量/正确性越好。")
-        else:
-            print(f"警告：响应格式异常。原始数据:\n{response_data}")
-
-    except requests.exceptions.HTTPError as e:
-        print(f"\n--- 调用 API 失败 (HTTP 错误) ---")
-        print(f"错误信息: {e}")
-        if hasattr(e.response, 'text'):
-            print(f"服务器返回内容: {e.response.text}")
-    except requests.exceptions.RequestException as e:
-        print(f"\n--- 调用 API 失败 (连接/网络错误) ---")
-        print(f"错误信息: {e}")
-    except json.JSONDecodeError:
-        print("\n--- JSON 解析失败 ---")
-        print(f"服务器返回了非 JSON 格式数据:\n{response.text}")
-
-
-# if __name__ == "__main__":
-#     send_score_request()
-
-
-
-
-
-
-################################ Llama-3.1-8B-Instruct-RM-RB2  ######################################
-
-
-
-
-import requests
-import json
-import time
-
-# #################################################
-# ### 配置部分：根据您的部署信息修改
-# #################################################
-HOST = "127.0.0.1" # 如果在同一台机器上运行，使用 127.0.0.1
-PORT = 30006       # 您部署时指定的端口号
-HOST_URL = f"http://{HOST}:{PORT}"
-
-# SGLang 推荐使用 /score 接口用于获取奖励模型的分数
-INFERENCE_URL = HOST_URL + "/classify" 
-
-# #################################################
-# ### 测试数据：用于验证奖励模型效果
-# #################################################
-# 待评分的问题：这是一个具有明确正确答案的问题
-PROMPT = "什么是神经网络中 Sigmoid 激活函数的数值输出范围？"
-
-# 响应 1：错误答案
-RESPONSE_1 = "Sigmoid 节点的输出范围在 -1 到 1 之间。"
-# 响应 2：正确答案
-RESPONSE_2 = "Sigmoid 节点的输出范围在 0 到 1 之间。"
-# =================================================================
-
-
-# --- 关键函数：格式化对话结构 ---
-def format_conversation(prompt: str, response: str) -> str:
-    """
-    将 Prompt 和 Response 格式化为 Llama/Instruct 模型通常接受的输入序列。
-    奖励模型通常需要完整且带有角色标签的对话历史作为输入。
-    """
-    # Llama 3.1 Instruct 格式通常遵循 Chat Template，但对于 RM 来说，
-    # 简单的 Human/Assistant 标签通常是有效的输入序列。
-    return f"Human: {prompt}\nAssistant: {response}"
-
-# 构造请求体数据
-request_data = {
-    # 'text' 字段包含一个列表，列表中的每一项是要评分的完整文本序列
-    "text": [
-        format_conversation(PROMPT, RESPONSE_1), # 序列 1 (错误)
-        format_conversation(PROMPT, RESPONSE_2), # 序列 2 (正确)
-    ],
-}
-# -----------------------------------
-
-
-def send_score_request():
-    """发送评分请求并处理响应。"""
-    print(f"[{time.strftime('%H:%M:%S')}] 正在向 {INFERENCE_URL} 发送评分请求...")
-    print(f"请求内容：对两个 Assistant 响应进行评分 (总数: {len(request_data['text'])})")
-
-    try:
-        response = requests.post(
-            INFERENCE_URL,
-            json=request_data,
-            headers={"Content-Type": "application/json"},
-            timeout=30 # 增加超时时间以应对模型首次加载和计算
-        )
-        response.raise_for_status()
-        
-        response_data = response.json()
-        
-        print("\n--- API 响应成功 ---")
-        
-        # SGLang 的 /score 接口通常返回一个包含 'scores' 列表的 JSON 对象
-        if isinstance(response_data, dict) and "scores" in response_data and isinstance(response_data["scores"], list):
-            scores = response_data["scores"]
-            
-            if len(scores) < 2:
-                print(f"错误: 预期的分数数量不足 (预期 2, 实际 {len(scores)})")
-                return
-
-            print("\n============================== 评分结果 ==============================")
-            print(f"问题: {PROMPT}")
-            print("===================================================================")
-            print(f"响应 1 (错误): {RESPONSE_1}")
-            print(f"**得分 1:** {scores[0]:.4f}")
-            print("-" * 65)
-            print(f"响应 2 (正确): {RESPONSE_2}")
-            print(f"**得分 2:** {scores[1]:.4f}")
-            print("===================================================================")
-            
-            # 诊断/结论
-            if scores[1] > scores[0]:
-                print(f"\n✅ 诊断: 模型表现良好！(得分 2 > 得分 1) - 正确响应获得了更高的奖励。")
-            else:
-                print(f"\n❌ 诊断: 模型表现异常！(得分 1 >= 得分 2) - 正确响应未获得更高的奖励。")
-            
-        else:
-            print(f"警告：响应格式异常。原始数据:\n{json.dumps(response_data, indent=4, ensure_ascii=False)}")
-
-    except requests.exceptions.HTTPError as e:
-        print(f"\n--- 调用 API 失败 (HTTP 错误) ---")
-        print(f"错误信息: {e}")
-        if hasattr(e.response, 'text'):
-            print(f"服务器返回内容:\n{e.response.text}")
-    except requests.exceptions.RequestException as e:
-        print(f"\n--- 调用 API 失败 (连接/网络错误) ---")
-        print(f"错误信息: 请检查 SGLang 服务器是否在 {HOST_URL} 端口 {PORT} 运行，并且 Docker 容器状态正常。")
-    except json.JSONDecodeError:
-        print("\n--- JSON 解析失败 ---")
-        if 'response' in locals() and hasattr(response, 'text'):
-            print(f"服务器返回了非 JSON 格式数据:\n{response.text}")
+    # 3. 保存新文件
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    
+    print(f"\n实验完成！结果已保存至: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
-    send_score_request()
-
-
-
-
-
-
-
-################################ RM-R1  ######################################
-# import requests
-
-# url = "http://127.0.0.1:30004/generate"
-
-# prompt = f"""
-# You are a reward model.
-# Evaluate the quality of the following answer to the question.
-# Output only a single scalar score between 0 and 10.
-# The output must contain only the score wrapped in <score> and </score>, with no extra text.
-
-# === Input ===
-# [Question]
-# What are the main causes of climate change?
-
-# [Answer]
-# Climate change happens because the weather changes a lot and sometimes the Earth just gets hotter for no clear reason.
-
-
-# === Output ===
-# <score>?</score>
-# """
-
-# payload = {
-#     "text": prompt,          # 必须是 text，不能叫 prompt
-#     "max_new_tokens": 1024,
-#     "temperature": 0
-# }
-
-# resp = requests.post(url, json=payload)
-
-# if resp.status_code == 200:
-#     print(resp.json()["text"])
-# else:
-#     print("--- 调用 API 失败 ---")
-#     print(resp.status_code, resp.text)
-
+    main()

@@ -1,0 +1,7 @@
+{"time":"2026-01-04T06:54:15.335475826Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/wandb/run-20260104_065415-huenu6cl/logs/debug-core.log"}
+{"time":"2026-01-04T06:54:16.128661742Z","level":"INFO","msg":"created new stream","id":"huenu6cl"}
+{"time":"2026-01-04T06:54:16.128710532Z","level":"INFO","msg":"stream: started","id":"huenu6cl"}
+{"time":"2026-01-04T06:54:16.128737561Z","level":"INFO","msg":"sender: started","stream_id":"huenu6cl"}
+{"time":"2026-01-04T06:54:16.128765142Z","level":"INFO","msg":"handler: started","stream_id":"huenu6cl"}
+{"time":"2026-01-04T06:54:16.128734439Z","level":"INFO","msg":"writer: Do: started","stream_id":"huenu6cl"}
+{"time":"2026-01-04T06:54:16.681595337Z","level":"INFO","msg":"Starting system monitor"}

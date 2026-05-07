@@ -1,0 +1,260 @@
+_wandb:
+    value:
+        cli_version: 0.19.9
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 30
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 95
+                - 105
+            "2":
+                - 1
+                - 5
+                - 11
+                - 30
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 95
+                - 105
+            "3":
+                - 2
+                - 13
+                - 16
+                - 23
+                - 55
+                - 61
+            "4": 3.10.12
+            "5": 0.19.9
+            "6": 4.50.3
+            "8":
+                - 5
+            "12": 0.19.9
+            "13": linux-x86_64
+actor_rollout_ref:
+    value:
+        actor:
+            checkpoint:
+                contents:
+                    - model
+                    - hf_model
+                    - optimizer
+                    - extra
+            clip_ratio: 0.2
+            entropy_coeff: 0
+            fsdp_config:
+                fsdp_size: -1
+                optimizer_offload: false
+                param_offload: false
+                wrap_policy:
+                    min_num_params: 0
+            grad_clip: 1
+            kl_loss_coef: 0.001
+            kl_loss_type: low_var_kl
+            optim:
+                lr: 1e-06
+                lr_warmup_steps: -1
+                lr_warmup_steps_ratio: 0
+                min_lr_ratio: null
+                total_training_steps: 82
+                warmup_style: constant
+            ppo_epochs: 1
+            ppo_max_token_len_per_gpu: 16384
+            ppo_micro_batch_size: null
+            ppo_micro_batch_size_per_gpu: 10
+            ppo_mini_batch_size: 120
+            shuffle: false
+            strategy: fsdp
+            ulysses_sequence_parallel_size: 1
+            use_dynamic_bsz: false
+            use_kl_loss: true
+            use_torch_compile: true
+        hybrid_engine: true
+        model:
+            enable_gradient_checkpointing: true
+            external_lib: null
+            path: /workspace/models/Qwen2.5-7B-Base
+            use_remove_padding: true
+        ref:
+            fsdp_config:
+                param_offload: true
+                wrap_policy:
+                    min_num_params: 0
+            log_prob_max_token_len_per_gpu: 16384
+            log_prob_micro_batch_size: null
+            log_prob_micro_batch_size_per_gpu: 40
+            log_prob_use_dynamic_bsz: false
+            ulysses_sequence_parallel_size: 1
+        rollout:
+            disable_log_stats: true
+            do_sample: true
+            dtype: bfloat16
+            enable_chunked_prefill: true
+            enforce_eager: true
+            free_cache_engine: true
+            gpu_memory_utilization: 0.4
+            ignore_eos: false
+            load_format: dummy_dtensor
+            log_prob_max_token_len_per_gpu: 16384
+            log_prob_micro_batch_size: null
+            log_prob_micro_batch_size_per_gpu: 40
+            log_prob_use_dynamic_bsz: false
+            max_model_len: null
+            max_num_batched_tokens: 8192
+            max_num_seqs: 1024
+            "n": 8
+            name: vllm
+            prompt_length: 1024
+            response_length: 2048
+            temperature: 1
+            tensor_model_parallel_size: 2
+            top_k: -1
+            top_p: 1
+            trace:
+                backend: weave
+            use_fire_sampling: false
+            val_kwargs:
+                do_sample: false
+                "n": 1
+                temperature: 0
+                top_k: -1
+                top_p: 1
+algorithm:
+    value:
+        adv_estimator: grpo
+        gamma: 1
+        kl_ctrl:
+            kl_coef: 0.001
+            type: fixed
+        kl_penalty: kl
+        lam: 1
+critic:
+    value:
+        checkpoint:
+            contents:
+                - model
+                - hf_model
+                - optimizer
+                - extra
+        cliprange_value: 0.5
+        forward_max_token_len_per_gpu: 32768
+        forward_micro_batch_size: null
+        forward_micro_batch_size_per_gpu: null
+        grad_clip: 1
+        model:
+            enable_gradient_checkpointing: true
+            external_lib: null
+            fsdp_config:
+                fsdp_size: -1
+                optimizer_offload: false
+                param_offload: false
+                wrap_policy:
+                    min_num_params: 0
+            path: ~/models/deepseek-llm-7b-chat
+            tokenizer_path: /workspace/models/Qwen2.5-7B-Base
+            use_remove_padding: false
+        optim:
+            lr: 1e-05
+            lr_warmup_steps_ratio: 0
+            min_lr_ratio: null
+            total_training_steps: 82
+            warmup_style: constant
+        ppo_epochs: 1
+        ppo_max_token_len_per_gpu: 32768
+        ppo_micro_batch_size: null
+        ppo_micro_batch_size_per_gpu: null
+        ppo_mini_batch_size: 120
+        shuffle: false
+        strategy: fsdp
+        ulysses_sequence_parallel_size: 1
+        use_dynamic_bsz: false
+custom_reward_function:
+    value:
+        name: compute_score
+        path: null
+data:
+    value:
+        filter_overlong_prompts: true
+        image_key: images
+        max_prompt_length: 1024
+        max_response_length: 2048
+        prompt_key: prompt
+        return_raw_chat: false
+        return_raw_input_ids: false
+        shuffle: true
+        tokenizer: null
+        train_batch_size: 240
+        train_files: /workspace/data/train_covalid/tulu-3-sft-personas-code/train_code_partial.parquet
+        truncation: error
+        val_batch_size: 400
+        val_files:
+            - /workspace/data/train_covalid/tulu-3-wildchat-sampled/test_chat.parquet
+            - /workspace/data/train_covalid/PKU-SafeRLHF-sampled/test_safety.parquet
+            - /workspace/data/train_covalid/SciRIFF-sampled/test_general.parquet
+            - /workspace/data/train_covalid/RLVR-MATH-sampled/test_math.parquet
+            - /workspace/data/train_covalid/tulu-3-if-augmented-sampled/test_if.parquet
+            - /workspace/data/train_covalid/m-a-p-deepwriting-sampled/test_writing.parquet
+            - /workspace/data/train_covalid/tulu-3-sft-personas-code/test_code.parquet
+            - /workspace/data/train_covalid/xlam-function-calling/test_function_calling_500.parquet
+            - /workspace/data/valid/code/codealpaca_processed_val/test_code.parquet
+            - /workspace/data/valid/code/openai_humaneval_processed_val/test_code.parquet
+reward_model:
+    value:
+        enable: false
+        forward_max_token_len_per_gpu: 32768
+        max_length: null
+        micro_batch_size: null
+        micro_batch_size_per_gpu: null
+        model:
+            external_lib: null
+            fsdp_config:
+                fsdp_size: -1
+                param_offload: false
+                wrap_policy:
+                    min_num_params: 0
+            input_tokenizer: /workspace/models/Qwen2.5-7B-Base
+            path: ~/models/FsfairX-LLaMA3-RM-v0.1
+            use_remove_padding: false
+        reward_manager: dsr1
+        reward_manager_type: think
+        strategy: fsdp
+        ulysses_sequence_parallel_size: 1
+        use_dynamic_bsz: false
+        val_reward_manager: skywork-rmrb2
+        val_reward_manager_type: outcome
+trainer:
+    value:
+        balance_batch: true
+        critic_warmup: 0
+        default_hdfs_dir: null
+        default_local_dir: /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR
+        del_local_ckpt_after_load: false
+        experiment_name: r1_think_exp2_VR
+        logger:
+            - console
+            - wandb
+        max_actor_ckpt_to_keep: 1
+        max_critic_ckpt_to_keep: null
+        n_gpus_per_node: 6
+        nnodes: 1
+        project_name: llm-as-judge_code_grpo_qwen2-5_7b
+        resume_from_path: null
+        resume_mode: auto
+        save_freq: 20
+        test_freq: 5
+        total_epochs: 2
+        total_training_steps: null
+        val_before_train: true
+        val_generations_to_log_to_wandb: 0
+        val_only: false

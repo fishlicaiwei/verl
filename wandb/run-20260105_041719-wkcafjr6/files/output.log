@@ -1,0 +1,112 @@
+Using LocalLogger is deprecated. The constructor API will change
+Found checkpoint: %s /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+Load from checkpoint folder: /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+Setting global step to 30
+Resuming from /workspace/models/checkpoints/llm-as-judge_code_grpo_qwen2-5_7b/r1_think_exp2_VR/global_step_30
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+start ['skywork', 'rmrb2'] reward manager call...
+[skywork] invalid content format count in batch: 3172
+Sending 4418 requests to skywork/classify with batch size 64...
+[rmrb2] invalid content format count in batch: 3172
+Sending 4418 requests to rmrb2/classify with batch size 64...
+[rmrb2] reward model system error count in batch: 0
+[skywork] reward model system error count in batch: 0
+
+==================================================
+Batch Processing Summary (Size: 4418)
+Total time for current batch: 312.91 seconds
+==================================================
+--------------------
+[Prompt 0]: user
+you are a novelist, settings - hard sci fi. Let’s say chameleon clothes exists, it can be programmed to change colors up to the point of hiding wearer’s presence, imperfectly. list 50 ideas for use such clothes for fun and profit.
+assistant
+[Response 0]: <think>
+To generate 50 ideas for using chameleon clothes for fun and profit, I'll consider various scenarios where such technology could be beneficial or entertaining. I'll think about different settings, characters, and applications that could make use of this technology in creative ways.
+</think>
+
+<answer>
+1. **Fashion Shows**: Models wearing chameleon clothes could change colors and patterns to showcase different styles and designs.
+2. **Theatrical Performances**: Actors could blend into the set or change appearance to play multiple roles.
+3. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+4. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+5. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+6. **Street Performers**: Performers could blend into the crowd or change appearance to create a sense of mystery.
+7. **Virtual Reality Games**: Players could wear chameleon clothes to blend into the game's environment or change appearance for different characters.
+8. **Themed Parties**: Guests could wear chameleon clothes to match the party's theme or change appearance for different activities.
+9. **Fashion Design**: Designers could use chameleon clothes to create interactive clothing that changes with the wearer's mood or environment.
+10. **Theatrical Costumes**: Actors could wear chameleon clothes to blend into the set or change appearance for different characters.
+11. **Fashion Shows**: Models could change colors and patterns to showcase different styles and designs.
+12. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+13. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+14. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+15. **Street Performers**: Performers could blend into the crowd or change appearance to create a sense of mystery.
+16. **Virtual Reality Games**: Players could wear chameleon clothes to blend into the game's environment or change appearance for different characters.
+17. **Themed Parties**: Guests could wear chameleon clothes to match the party's theme or change appearance for different activities.
+18. **Fashion Design**: Designers could use chameleon clothes to create interactive clothing that changes with the wearer's mood or environment.
+19. **Theatrical Costumes**: Actors could wear chameleon clothes to blend into the set or change appearance for different characters.
+20. **Fashion Shows**: Models could change colors and patterns to showcase different styles and designs.
+21. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+22. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+23. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+24. **Street Performers**: Performers could blend into the crowd or change appearance to create a sense of mystery.
+25. **Virtual Reality Games**: Players could wear chameleon clothes to blend into the game's environment or change appearance for different characters.
+26. **Themed Parties**: Guests could wear chameleon clothes to match the party's theme or change appearance for different activities.
+27. **Fashion Design**: Designers could use chameleon clothes to create interactive clothing that changes with the wearer's mood or environment.
+28. **Theatrical Costumes**: Actors could wear chameleon clothes to blend into the set or change appearance for different characters.
+29. **Fashion Shows**: Models could change colors and patterns to showcase different styles and designs.
+30. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+31. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+32. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+33. **Street Performers**: Performers could blend into the crowd or change appearance to create a sense of mystery.
+34. **Virtual Reality Games**: Players could wear chameleon clothes to blend into the game's environment or change appearance for different characters.
+35. **Themed Parties**: Guests could wear chameleon clothes to match the party's theme or change appearance for different activities.
+36. **Fashion Design**: Designers could use chameleon clothes to create interactive clothing that changes with the wearer's mood or environment.
+37. **Theatrical Costumes**: Actors could wear chameleon clothes to blend into the set or change appearance for different characters.
+38. **Fashion Shows**: Models could change colors and patterns to showcase different styles and designs.
+39. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+40. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+41. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+42. **Street Performers**: Performers could blend into the crowd or change appearance to create a sense of mystery.
+43. **Virtual Reality Games**: Players could wear chameleon clothes to blend into the game's environment or change appearance for different characters.
+44. **Themed Parties**: Guests could wear chameleon clothes to match the party's theme or change appearance for different activities.
+45. **Fashion Design**: Designers could use chameleon clothes to create interactive clothing that changes with the wearer's mood or environment.
+46. **Theatrical Costumes**: Actors could wear chameleon clothes to blend into the set or change appearance for different characters.
+47. **Fashion Shows**: Models could change colors and patterns to showcase different styles and designs.
+48. **Escape Rooms**: Participants could use chameleon clothes to blend into the room's decor and solve puzzles.
+49. **Art Galleries**: Artists could wear chameleon clothes to create interactive installations that change with the viewer's perspective.
+50. **Fashion Photography**: Models could change colors and patterns to match the background or create unique visual effects.
+</answer>
+  - [Score - skywork]: -21.88
+  - [Score - rmrb2]: -1.50
+--------------------
+[DEBUG] Attempting to save dataset to: /workspace/dsr1_code_VR_rubric_dataset.json
+[DEBUG] Total records to save: 0
+('Initial validation metrics: '
+ "{'val/test_score/tulu-3-wildchat-if-on-policy-8b': -6.94637556096043, "
+ "'val/test_score/PKU-SafeRLHF': -9.338754150390624, "
+ "'val/test_score/SciRIFF-train-mix': -8.067627179740679, "
+ "'val/test_score/RLVR-MATH': -9.01960326898805, "
+ "'val/test_score/tulu-3-IF-augmented-on-policy-8b': -10.698058350673168, "
+ "'val/test_score/DeepWriting-20K': -5.608211008707682, "
+ "'val/test_score/tulu-3-sft-personas-code': 7.0560205078125, "
+ "'val/test_score/xlam-function-calling-60k': 2.1935249242889747, "
+ "'val/test_score/codealpaca_20k': -8.3495625, "
+ "'val/test_score/openai_humaneval': 1.7398532774390243, "
+ "'val/invalid_format_cnt_skywork': 3172, "
+ "'val/test_score_rmrb2/tulu-3-wildchat-if-on-policy-8b': -0.5340486602463312, "
+ "'val/test_score_rmrb2/PKU-SafeRLHF': -0.4906323547363281, "
+ "'val/test_score_rmrb2/SciRIFF-train-mix': -0.5845384503355121, "
+ "'val/test_score_rmrb2/RLVR-MATH': -2.4198339107334004, "
+ "'val/test_score_rmrb2/tulu-3-IF-augmented-on-policy-8b': "
+ "-1.7546374751072304, 'val/test_score_rmrb2/DeepWriting-20K': "
+ "-0.20341774622599285, 'val/test_score_rmrb2/tulu-3-sft-personas-code': "
+ "2.7715546875, 'val/test_score_rmrb2/xlam-function-calling-60k': "
+ "0.6937270946716995, 'val/test_score_rmrb2/codealpaca_20k': -0.113859375, "
+ "'val/test_score_rmrb2/openai_humaneval': 1.4086735423018293, "
+ "'val/invalid_format_cnt_rmrb2': 3172}")
+step:30 - val/test_score/tulu-3-wildchat-if-on-policy-8b:-6.946 - val/test_score/PKU-SafeRLHF:-9.339 - val/test_score/SciRIFF-train-mix:-8.068 - val/test_score/RLVR-MATH:-9.020 - val/test_score/tulu-3-IF-augmented-on-policy-8b:-10.698 - val/test_score/DeepWriting-20K:-5.608 - val/test_score/tulu-3-sft-personas-code:7.056 - val/test_score/xlam-function-calling-60k:2.194 - val/test_score/codealpaca_20k:-8.350 - val/test_score/openai_humaneval:1.740 - val/invalid_format_cnt_skywork:3172.000 - val/test_score_rmrb2/tulu-3-wildchat-if-on-policy-8b:-0.534 - val/test_score_rmrb2/PKU-SafeRLHF:-0.491 - val/test_score_rmrb2/SciRIFF-train-mix:-0.585 - val/test_score_rmrb2/RLVR-MATH:-2.420 - val/test_score_rmrb2/tulu-3-IF-augmented-on-policy-8b:-1.755 - val/test_score_rmrb2/DeepWriting-20K:-0.203 - val/test_score_rmrb2/tulu-3-sft-personas-code:2.772 - val/test_score_rmrb2/xlam-function-calling-60k:0.694 - val/test_score_rmrb2/codealpaca_20k:-0.114 - val/test_score_rmrb2/openai_humaneval:1.409 - val/invalid_format_cnt_rmrb2:3172.000
+Training Progress:  37%|███▋      | 30/82 [00:00<?, ?it/s]
+start ['dsr1'] reward manager call...
+[dsr1] invalid content format count in batch: 1520
+[dsr1] Running in 'low' mode: using low-speed client only.

@@ -1,0 +1,27 @@
+这里记录了进行验证rollout数据分析时候改过的地方，训练时记得改回来
+参数：
++trainer.val_only=True \
+
++actor_rollout_ref.rollout.val_kwargs.n=4 \
++actor_rollout_ref.rollout.val_kwargs.temperature=1.0 \
++actor_rollout_ref.rollout.val_kwargs.do_sample=True \
+
+验证时开启了
+self._save_reward_data(prompts_str, responses_str, all_results_list, think_contents, answer_contents, think_lens, answer_lens, data_sources)
+训练时记得注释掉
+
+
+data_router：
+注释了domain内不同源泛化数据+不同domain的covaild数据：
+final_val_paths = common_val_paths #+ domain_specific_val_paths
+
+   common_val_paths = [
+        f"{FILE1}/tulu-3-wildchat-sampled/test_chat.parquet",
+        # f"{FILE1}/PKU-SafeRLHF-sampled/test_safety.parquet",
+        # f"{FILE1}/SciRIFF-sampled/test_general.parquet",
+        # f"{FILE1}/RLVR-MATH-sampled/test_math.parquet",
+        # f"{FILE1}/tulu-3-if-augmented-sampled/test_if.parquet",
+        # f"{FILE1}/m-a-p-deepwriting-sampled/test_writing.parquet",
+        # f"{FILE1}/tulu-3-sft-personas-code/test_code.parquet",
+        # f"{FILE1}/xlam-function-calling/test_function_calling_500.parquet"
+    ]

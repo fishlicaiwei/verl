@@ -1,0 +1,7 @@
+{"time":"2026-01-05T04:17:19.564855342Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/wandb/run-20260105_041719-wkcafjr6/logs/debug-core.log"}
+{"time":"2026-01-05T04:17:20.353035688Z","level":"INFO","msg":"created new stream","id":"wkcafjr6"}
+{"time":"2026-01-05T04:17:20.353070199Z","level":"INFO","msg":"stream: started","id":"wkcafjr6"}
+{"time":"2026-01-05T04:17:20.353087918Z","level":"INFO","msg":"handler: started","stream_id":"wkcafjr6"}
+{"time":"2026-01-05T04:17:20.353109166Z","level":"INFO","msg":"sender: started","stream_id":"wkcafjr6"}
+{"time":"2026-01-05T04:17:20.353127135Z","level":"INFO","msg":"writer: Do: started","stream_id":"wkcafjr6"}
+{"time":"2026-01-05T04:17:20.869445937Z","level":"INFO","msg":"Starting system monitor"}

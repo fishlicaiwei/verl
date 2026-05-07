@@ -1,0 +1,7 @@
+{"time":"2026-01-05T04:38:29.401857846Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/wandb/run-20260105_043829-ohpl4tkg/logs/debug-core.log"}
+{"time":"2026-01-05T04:38:30.241172531Z","level":"INFO","msg":"created new stream","id":"ohpl4tkg"}
+{"time":"2026-01-05T04:38:30.241205575Z","level":"INFO","msg":"stream: started","id":"ohpl4tkg"}
+{"time":"2026-01-05T04:38:30.241227962Z","level":"INFO","msg":"handler: started","stream_id":"ohpl4tkg"}
+{"time":"2026-01-05T04:38:30.241262693Z","level":"INFO","msg":"writer: Do: started","stream_id":"ohpl4tkg"}
+{"time":"2026-01-05T04:38:30.241256162Z","level":"INFO","msg":"sender: started","stream_id":"ohpl4tkg"}
+{"time":"2026-01-05T04:38:30.832579029Z","level":"INFO","msg":"Starting system monitor"}
