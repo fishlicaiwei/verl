@@ -1,0 +1,67 @@
+1. 配置文件 (rollout_and_score_config.yaml)
+
+  这个文件是控制脚本行为的关键。在运行脚本之前，您需要修改以下几个重要路径：
+
+   * data.val_files: 您希望用来生成回答的验证数据集的路径。
+   * actor_rollout_ref.model.path: 您训练好的基模 checkpoint 的路径。 这个模型将被用来生成回答。
+   * critic.model.path: 您的奖励模型 (reward model) checkpoint 的路径。 这个模型将用于打分。
+   * critic.reward_manager.llm_reward.prompt_template_path: llm_reward 函数所需要的 prompt 模板文件路径。
+
+  您也可以根据您的硬件和需求，调整文件中的其他参数，如 rollout.temperature, rollout.tensor_model_parallel_size 等。
+
+  2. 运行脚本 (rollout_and_score.py)
+
+  该脚本接受多个命令行参数来控制其执行。
+
+  命令行参数:
+
+   * --config_path: (必填) 指向 rollout_and_score_config.yaml 配置文件的路径。
+   * --output_file: (必填) 用于保存最终结果（包括回答、分数等）的文件路径，格式为 JSONL。
+   * --input_file: (可选) 如果您已经生成了回答并保存在一个文件中，可以在这里提供该文件的路径。脚本将跳过生成步骤，直接进行打分。这对于在不同的机器上进行打分非常有用。
+   * --scoring_mode: (可选) 决定打分的方式。
+       * final_answer (默认): 脚本会先解析生成的文本以提取最终答案，然后只对答案进行打分。
+       * chain_of_thought: 脚本会对整个生成的文本（即“思维链”）进行打分。
+   * --rollout_batch_size: (可选) 回答生成阶段的批处理大小。默认为 32。
+   * --scoring_batch_size: (可选) 打分阶段的批处理大小。默认为 8。
+
+  ---
+
+  3. 使用示例
+
+  示例 1: 实时生成和打分 (Online Mode)
+
+  在此模式下，脚本会首先用您的基模生成回答，然后立即使用奖励模型对它们进行打分。
+
+  命令:
+
+   1 python verl/examples/ppo_trainer/rollout_and_score.py \
+   2     --config_path verl/examples/ppo_trainer/rollout_and_score_config.yaml \
+   3     --output_file /path/to/your/output_results.jsonl \
+   4     --scoring_mode final_answer
+
+  示例 2: 离线打分 (Offline Mode)
+
+  此模式适用于您已经生成了回答（例如，在另一台服务器上），现在只想对它们进行打分的情况。输入文件应该是一个 JSONL 文件，其中每行是一个 JSON 对象，至少包含 "prompt" 和 "generation" 两个键。
+
+  命令:
+
+   1 python verl/examples/ppo_trainer/rollout_and_score.py \
+   2     --config_path verl/examples/ppo_trainer/rollout_and_score_config.yaml \
+   3     --input_file /path/to/your/pre_generated_answers.jsonl \
+   4     --output_file /path/to/your/scored_results.jsonl \
+   5     --scoring_mode chain_of_thought
+
+  ---
+
+  4. 输出文件格式
+
+  由 --output_file 参数指定的输出文件将是一个 JSONL 文件。文件中的每一行都是一个 JSON 对象，结构如下：
+
+   1 {
+   2   "prompt": "数据集中的原始提示。",
+   3   "generation": "模型生成的回答。",
+   4   "model_source": "/path/to/your/policy/model/checkpoint",
+   5   "data_source": "~/data/rlhf/gsm8k/test.parquet",
+   6   "score": 1.2345, // 奖励模型给出的分数
+   7   "scoring_mode": "final_answer" // 使用的打分模式
+   8 }
