@@ -871,18 +871,19 @@ class RayPPOTrainer(object):
         # save rollout data with dual rewards and advantages
         self._save_rollout_data(local_global_step_folder)
 
-    def _save_rollout_data(self, save_dir):
+    def _save_rollout_data(self, save_dir, batch=None):
         """Save rollout data with raw scores for offline advantage analysis."""
         save_info = getattr(self, '_save_rollout_info', {})
         if not save_info:
             return
 
         n = self.config.actor_rollout_ref.rollout.n
-        batch = getattr(self, '_last_batch', None)
+        if batch is None:
+            batch = getattr(self, '_last_batch', None)
         if batch is None:
             return
 
-        uid_array = batch.batch['uid']
+        uid_array = batch.non_tensor_batch['uid']
 
         # Decode prompts and responses
         prompts_decoded = self.tokenizer.batch_decode(batch.batch['input_ids'], skip_special_tokens=True)
@@ -930,7 +931,11 @@ class RayPPOTrainer(object):
             'response_lens': torch.stack(response_lens_list) if response_lens_list else None,
         }
 
-        save_path = os.path.join(save_dir, 'rollout_data.pt')
+        # If saving to rollout_data/ dir, use step_N.pt; if saving to checkpoint dir, use rollout_data.pt
+        if 'rollout_data' in save_dir and 'global_step_' not in save_dir:
+            save_path = os.path.join(save_dir, f'step_{self.global_steps}.pt')
+        else:
+            save_path = os.path.join(save_dir, 'rollout_data.pt')
         torch.save(batch_data, save_path)
         print(f'Saved rollout data to {save_path}, shape: {len(prompts_list)} groups x {n} responses')
 
@@ -1143,6 +1148,11 @@ class RayPPOTrainer(object):
                                     self._save_rollout_info['prm_scores'] = prm_scores
                                     break
 
+                        # Save rollout data every step (independent of checkpoint save_freq)
+                        rollout_save_dir = os.path.join(self.config.trainer.default_local_dir, 'rollout_data')
+                        os.makedirs(rollout_save_dir, exist_ok=True)
+                        self._save_rollout_data(rollout_save_dir, batch=batch)
+
                         # Log all base rewards and scalar metrics from the reward function
                         for key, val in reward_result.items():
                             if isinstance(val, torch.Tensor):
@@ -1217,9 +1227,10 @@ class RayPPOTrainer(object):
 
                     if self.config.trainer.save_freq > 0 and ( is_last_step or \
                             self.global_steps % self.config.trainer.save_freq == 0):
-                        self._last_batch = batch
                         with _timer('save_checkpoint', timing_raw):
                             self._save_checkpoint()
+
+                    self._last_batch = batch
 
                 # collect metrics
                 metrics.update(compute_data_metrics(batch=batch, use_critic=self.use_critic))
